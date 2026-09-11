@@ -9,6 +9,8 @@ const CARTOONS = [
 		cat: 'klassiker',
 		title: 'Tom und Jerry',
 		color: '#D96B6B',
+
+		img: 'src/tom.png',
 		short:
 			'Die ewige Jagd zwischen Kater Tom und Maus Jerry – slapstickreich und dialogfrei.',
 		long: 'Tom und Jerry ist eine der bekanntesten Zeichentrickserien der Welt. Die stumme Rivalität zwischen dem Kater Tom und der cleveren Maus Jerry begeistert seit den 1940er Jahren Generationen von Zuschauern mit körperbetontem Slapstick-Humor.',
@@ -20,6 +22,7 @@ const CARTOONS = [
 		cat: 'klassiker',
 		title: 'Sylvester &amp; Tweety',
 		color: '#F2A93B',
+		img: 'src/tom2.png',
 		short:
 			'Kater Sylvester versucht ständig, den kleinen Kanarienvogel Tweety zu fangen – erfolglos.',
 		long: 'In dieser Looney-Tunes-Reihe jagt der tollpatschige Kater Sylvester unermüdlich den kleinen, aber gerissenen Kanarienvogel Tweety. Jede Episode ist ein Wettlauf aus Fallen, Missgeschicken und komischer Situationskomik.',
