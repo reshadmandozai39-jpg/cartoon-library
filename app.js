@@ -1,12 +1,17 @@
 function cardHTML(item) {
 	return `
     <a class="card" href="detail.html?id=${item.id}" target="_blank" rel="noopener" tabindex="0">
-      <div class="card-theme" style="background:${item.color}">${item.title}</div>
+      <div class="card-thumb-wrapper" style="background-color: ${item.color};">
+        <img class="card-thumb" 
+             src="${item.img}" 
+             alt="${item.title}" 
+             onerror="this.style.display='none';">
+      </div>
       <div class="card-body">
-        <p class="card-title">${item.title}</p>
+        <span class="card-genre">${item.genre || ''}</span>
+        <h3 class="card-title">${item.title}</h3>
         <p class="card-desc">${item.short}</p>
-        <img class="card-thumb" src="${item.img}" alt="${item.title}">
-        <span class="card-tag">Mehr erfahren →</span>
+        <span class="card-tag">Mehr erfahren &rarr;</span>
       </div>
     </a>`;
 }

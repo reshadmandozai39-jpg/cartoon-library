@@ -5,27 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CartoonHub Alle Cartoons an einem Ort</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<!-- <link
-			href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600&display=swap"
-			rel="stylesheet" /> -->
-
 		<link rel="stylesheet" href="styles.css" />
-
-
    <header class="site-header">
   <div class="nav-container">
-    <!-- Brand / Logo -->
     <a href="#" class="brand">Cartoon<span>Hub</span></a>
-
-    <!-- Hauptnavigation -->
     <nav class="main-nav">
-      
-      <!-- 1. Klassiker -->
-      <div class="nav-item mega-item">
+          <div class="nav-item mega-item">
         <a href="#klassiker" class="nav-link active">Klassiker <span class="arrow">▾</span></a>
-        
-        <!-- Mega Menu -->
-        <div class="dropdown-wrapper mega-wrapper">
+                <div class="dropdown-wrapper mega-wrapper">
           <div class="mega-menu">
             <div class="menu-column">
               <h4>Golden Era</h4>
@@ -60,8 +47,6 @@
           </div>
         </div>
       </div>
-
-      <!-- 2. Cartoon Network -->
       <div class="nav-item">
         <a href="#cartoonnetwork" class="nav-link">Cartoon Network <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -75,7 +60,6 @@
         </div>
       </div>
 
-      <!-- 3. Anime & Pokémon -->
       <div class="nav-item">
         <a href="#anime" class="nav-link">Anime &amp; Pokémon <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -89,7 +73,6 @@
         </div>
       </div>
 
-      <!-- 4. Action & Abenteuer -->
       <div class="nav-item">
         <a href="#action" class="nav-link">Action &amp; Abenteuer <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -102,7 +85,6 @@
         </div>
       </div>
 
-      <!-- 5. Retro Cartoons -->
       <div class="nav-item">
         <a href="#retro" class="nav-link">Retro Cartoons <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -115,7 +97,6 @@
         </div>
       </div>
 
-      <!-- 6. Familienserien -->
       <div class="nav-item">
         <a href="#familie" class="nav-link">Familienserien <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -128,7 +109,6 @@
         </div>
       </div>
 
-      <!-- 7. Superhelden -->
       <div class="nav-item">
         <a href="#superhelden" class="nav-link">Superhelden <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -141,7 +121,6 @@
         </div>
       </div>
 
-      <!-- 8. Fantasy & Sci-Fi -->
       <div class="nav-item">
         <a href="#fantasy" class="nav-link">Fantasy &amp; Sci-Fi <span class="arrow">▾</span></a>
         <div class="dropdown-wrapper">
@@ -156,9 +135,8 @@
 
     </nav>
 
-    <!-- Suchleiste -->
     <div class="search-box">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon"></span>
       <input type="text" id="searchInput" placeholder="Cartoon suchen..." autocomplete="off">
     </div>
   </div>
@@ -188,52 +166,72 @@
 				</div>
 			</div>
 			<div class="hero-visual">
+                <img src="src/pokemon/pikachu.jpg" alt="Pikachu" class="hero-img">
 				<div class="big-title">Pika Pika!<br />Pokémon im Fokus</div>
 			</div>
 		</section>
 
 		<main id="results"></main>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col brand-col">
+      <a href="#" class="footer-brand">Cartoon<span>Hub</span></a>
+      <p class="brand-desc">
+        Deine ultimative Fan-Übersicht für Nostalgie, Kult-Cartoons und aktuelle Zeichentrickserien aus mehreren Jahrzehnten.
+      </p>
+      <div class="fan-badge">
+        <span> Non-Profit Fanprojekt</span>
+      </div>
+    </div>
 
-		<footer>
-			<div class="footer-inner">
-				<div>
-					<div class="brand" style="font-size: 20px">
-						Cartoon<span>Hub</span>
-					</div>
-					<p style="margin-top: 10px">
-						Eine Fan-Übersicht der schönsten Zeichentrickserien und -filme aus
-						mehreren Jahrzehnten.
-					</p>
-				</div>
-				<div>
-					<h4>Kategorien</h4>
-					<a href="#klassiker">Klassiker</a>
-					<a href="#cartoonnetwork">Cartoon Network</a>
-					<a href="#anime">Anime &amp; Pokémon</a>
-					<a href="#filme">Filme</a>
-				</div>
-				<div>
-					<h4>Info</h4>
-					<a href="#">Über uns</a>
-					<a href="#">Kontakt</a>
-					<a href="#">Impressum</a>
-					<a href="#">Datenschutz</a>
-				</div>
-				<div>
-					<h4>Folgen</h4>
-					<a href="#">Instagram</a>
-					<a href="#">YouTube</a>
-					<a href="#">Discord</a>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<span
-					>© 2026 CartoonHub. Alle Serien und Filmrechte liegen bei ihren
-					jeweiligen Studios.</span
-				>
-				<span>Fanseite, nicht kommerziell.</span>
-			</div>
-		</footer>
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul class="footer-links">
+        <li><a href="#klassiker">Klassiker (50er-90er)</a></li>
+        <li><a href="#cartoonnetwork">Cartoon Network</a></li>
+        <li><a href="#anime">Anime &amp; Pokémon</a></li>
+        <li><a href="#action">Action &amp; Abenteuer</a></li>
+        <li><a href="#superhelden">Superhelden Cartoons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Informationen</h4>
+      <ul class="footer-links">
+        <li><a href="#ueber-uns">Über das Projekt</a></li>
+        <li><a href="#kontakt">Kontakt &amp; Feedback</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+        <li><a href="#datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col community-col">
+      <h4>Community &amp; Folgen</h4>
+      <p class="sub-text">Tritt unserer Cartoon-Community bei:</p>
+      
+      <div class="social-badges">
+        <a href="#discord" class="social-btn discord">
+          <span class="icon"></span> Discord
+        </a>
+        <a href="#youtube" class="social-btn youtube">
+          <span class="icon"></span> YouTube
+        </a>
+        <a href="#instagram" class="social-btn instagram">
+          <span class="icon"></span> Instagram
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="bottom-container">
+      <p>&copy; 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei den jeweiligen Studios.</p>
+      <p class="disclaimer">Inoffizielle Fanseite &bull; Nicht kommerziell</p>
+    </div>
+  </div>
+</footer>
 
 		<script src="data.js"></script>
 		<script src="app.js"></script>

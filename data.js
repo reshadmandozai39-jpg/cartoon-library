@@ -1,9 +1,4 @@
-// Alle Cartoon-Daten. Farben sind Platzhalter statt echter Poster-Bilder.
-// Ersetze "img" später mit einem echten Bildpfad (z.B. "img: 'bilder/pokemon.jpg'")
-// und passe app.js Zeile mit card-thumb an, um <img> statt Farbfläche zu zeigen.
-
 const CARTOONS = [
-	// ---------------- KLASSIKER ----------------
 	{
 		id: 'tomjerry',
 		cat: 'klassiker',
@@ -11,7 +6,7 @@ const CARTOONS = [
 		color: '#D96B6B',
 		img: 'src/thom/thom6.jpg',
 		short:
-			'Die ewige Jagd zwischen Kater Tom und Maus Jerry – slapstickreich und dialogfrei.',
+			'Die ewige Jagd zwischen Kater Tom und Maus Jerry slapstickreich und dialogfrei.',
 		genre: 'Slapstick-Komödie',
 	},
 
@@ -21,7 +16,7 @@ const CARTOONS = [
 		title: 'Sylvester & Tweety',
 		color: '#F2A93B',
 		img: 'src/thom/thom6.jpg',
-		short: 'Kater Sylvester versucht ständig, Tweety zu fangen – erfolglos.',
+		short: 'Kater Sylvester versucht ständig, Tweety zu fangen  erfolglos.',
 		genre: 'Comedy',
 	},
 
@@ -30,7 +25,7 @@ const CARTOONS = [
 		cat: 'klassiker',
 		title: 'Lucky Luke',
 		color: '#3FA796',
-		img: 'src/thom/thom4.jpg',
+		img: 'src/thom/thom6.jpg',
 		short: 'Der Cowboy, der schneller schießt als sein Schatten.',
 		genre: 'Western-Comedy',
 	},
@@ -40,7 +35,7 @@ const CARTOONS = [
 		cat: 'klassiker',
 		title: 'Scooby-Doo',
 		color: '#5C7AAB',
-		img: 'src/thom/thom3.jpg',
+		img: 'src/thom/thom6.jpg',
 		short: 'Eine Gruppe Freunde löst gruselige Geheimnisse.',
 		genre: 'Mystery-Comedy',
 	},
@@ -55,7 +50,6 @@ const CARTOONS = [
 		genre: 'Familienserie',
 	},
 
-	// ---------------- CARTOON NETWORK ----------------
 	{
 		id: 'powerpuff',
 		cat: 'superhelden',
@@ -156,13 +150,12 @@ const CARTOONS = [
 		genre: 'Superhelden-Action',
 	},
 
-	// ---------------- ANIME & POKÉMON ----------------
 	{
 		id: 'pokemon',
 		cat: 'anime',
 		title: 'Pokémon',
 		color: '#F2C230',
-		img: 'src/thom/thom6.jpg',
+		img: 'src/pokemon/pikachu.jpg',
 		short: 'Ash und Pikachu reisen durch die Pokémon-Welt.',
 		genre: 'Abenteuer-Anime',
 	},
@@ -197,7 +190,6 @@ const CARTOONS = [
 		genre: 'Action-Anime',
 	},
 
-	// ---------------- FILME ----------------
 	{
 		id: 'shrek',
 		cat: 'familie',
@@ -244,12 +236,10 @@ const CARTOONS = [
 		title: 'Kung Fu Panda',
 		color: '#2E2E2E',
 		img: 'src/thom/thom6.jpg',
-		short: 'Ein Panda wird zum Kung‑Fu‑Helden.',
+		short: 'Ein Panda wird zum Kung Fu Helden.',
 		genre: 'Action-Komödie',
 	},
 
-	// ---------------- MEHR SERIEN ----------------
-
 	{
 		id: 'samuraijack',
 		cat: 'action',
@@ -616,7 +606,7 @@ const CARTOONS = [
 		color: '#4060A8',
 		img: 'src/thom/thom6.jpg',
 		short: 'Die Jedi kämpfen in den Klonkriegen.',
-		genre: 'Sci‑Fi-Action',
+		genre: 'Sci Fi-Action',
 	},
 
 	{
@@ -785,7 +775,7 @@ const CARTOONS = [
 		color: '#7BA7FF',
 		img: 'src/thom/thom6.jpg',
 		short: 'Ein Kindergenie baut verrückte Erfindungen.',
-		genre: 'Sci‑Fi-Comedy',
+		genre: 'Sci Fi-Comedy',
 	},
 
 	{
@@ -815,7 +805,7 @@ const CARTOONS = [
 		color: '#4060A8',
 		img: 'src/thom/thom6.jpg',
 		short: 'Die Jedi kämpfen in den Klonkriegen.',
-		genre: 'Sci‑Fi-Action',
+		genre: 'SciFi-Action',
 	},
 
 	{

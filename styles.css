@@ -227,25 +227,40 @@ nav.links a:hover {
 	border-color: var(--teal);
 	color: var(--teal);
 }
-.hero-visual {
-	flex: 0 0 280px;
-	height: 340px;
-	border-radius: 16px;
-	background: linear-gradient(160deg, var(--teal), #245c53);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	overflow: hidden;
-	box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+
+.hero-visual .hero-img {
+	width: 45%; /* Etwas größer, damit das Bild besser wirkt */
+	height: auto; /* Behält das Seitenverhältnis bei */
+	max-height: 75%;
+	object-fit: cover;
+
+	position: absolute;
+	bottom: -10px; /* Lässt das Bild leicht über den unteren Rand ragen */
+	right: 12px;
+	z-index: 2;
+
+	border: 5px solid rgba(255, 255, 255, 0.9); /* 5px weißer Rahmen */
+	border-radius: 16px; /* Abgerundete Ecken passend zur Karte */
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Weicher Schatten für Tiefeneffekt */
+
+	transition: transform 0.3s ease; /* Hover-Animation */
 }
+
+/* Optional: Bild hebt sich leicht an, wenn man darüber fährt */
+.hero-visual:hover .hero-img {
+	transform: translateY(-5px) scale(1.03);
+}
+/* Falls der Text 'Pika Pika!' über dem Bild sichtbar bleiben soll: */
 .hero-visual .big-title {
 	font-family: 'Baloo 2';
 	font-weight: 800;
 	font-size: 22px;
 	text-align: center;
 	padding: 0 20px;
-	color: #0d2521;
+	color: #ffffff;
+	position: relative;
+	z-index: 2;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* ---------- SECTIONS / ROWS ---------- */
@@ -663,4 +678,181 @@ footer {
 	background-color: rgba(255, 255, 255, 0.12);
 	border-color: #f59e0b;
 	width: 210px;
+}
+
+/* --- FOOTER MAIN --- */
+.site-footer {
+	background-color: #0b111e;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	color: #94a3b8;
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		sans-serif;
+	padding-top: 50px;
+}
+
+.footer-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 24px 40px 24px;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+	gap: 40px;
+}
+
+/* --- SPALTE 1: BRAND --- */
+.footer-brand {
+	font-size: 1.5rem;
+	font-weight: 800;
+	color: #f59e0b;
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+.footer-brand span {
+	color: #2dd4bf;
+}
+
+.brand-desc {
+	font-size: 0.85rem;
+	line-height: 1.6;
+	color: #94a3b8;
+	margin-bottom: 16px;
+	max-width: 320px;
+}
+
+.fan-badge span {
+	display: inline-block;
+	background-color: rgba(245, 158, 11, 0.1);
+	color: #f59e0b;
+	border: 1px solid rgba(245, 158, 11, 0.2);
+	padding: 4px 10px;
+	border-radius: 20px;
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+/* --- SPALTEN HEADINGS & LINKS --- */
+.footer-col h4 {
+	color: #ffffff;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 16px;
+}
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-links li {
+	margin-bottom: 10px;
+}
+
+.footer-links a {
+	color: #94a3b8;
+	text-decoration: none;
+	font-size: 0.85rem;
+	transition:
+		color 0.2s ease,
+		transform 0.2s ease;
+	display: inline-block;
+}
+
+.footer-links a:hover {
+	color: #2dd4bf;
+	transform: translateX(4px);
+}
+
+/* --- SPALTE 4: SOCIAL BUTTONS --- */
+.sub-text {
+	font-size: 0.82rem;
+	margin-bottom: 12px;
+	color: #64748b;
+}
+
+.social-badges {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.social-btn {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 8px 14px;
+	border-radius: 8px;
+	color: #cbd5e1;
+	text-decoration: none;
+	font-size: 0.82rem;
+	font-weight: 600;
+	transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #ffffff;
+	border-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+}
+
+.social-btn.discord:hover {
+	border-color: #5865f2;
+	color: #5865f2;
+}
+.social-btn.youtube:hover {
+	border-color: #ff0000;
+	color: #ff0000;
+}
+.social-btn.instagram:hover {
+	border-color: #e1306c;
+	color: #e1306c;
+}
+
+/* --- FOOTER BOTTOM --- */
+.footer-bottom {
+	background-color: #070a12;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	padding: 16px 24px;
+	font-size: 0.78rem;
+	color: #64748b;
+}
+
+.bottom-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.disclaimer {
+	color: #475569;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+	.footer-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 550px) {
+	.footer-container {
+		grid-template-columns: 1fr;
+	}
+	.bottom-container {
+		flex-direction: column;
+		gap: 8px;
+		text-align: center;
+	}
 }
