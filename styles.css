@@ -40,7 +40,6 @@ img {
 	max-width: 100%;
 }
 
-/* ---------- NAVBAR ---------- */
 header {
 	position: sticky;
 	top: 0;
@@ -136,7 +135,6 @@ nav.links a:hover {
 	}
 }
 
-/* ---------- HERO ---------- */
 .hero {
 	position: relative;
 	padding: 64px 24px 56px;
@@ -229,28 +227,27 @@ nav.links a:hover {
 }
 
 .hero-visual .hero-img {
-	width: 45%; /* Etwas größer, damit das Bild besser wirkt */
-	height: auto; /* Behält das Seitenverhältnis bei */
+	width: 45%;
+	height: auto;
 	max-height: 75%;
 	object-fit: cover;
 
 	position: absolute;
-	bottom: -10px; /* Lässt das Bild leicht über den unteren Rand ragen */
+	bottom: -10px;
 	right: 12px;
 	z-index: 2;
 
-	border: 5px solid rgba(255, 255, 255, 0.9); /* 5px weißer Rahmen */
-	border-radius: 16px; /* Abgerundete Ecken passend zur Karte */
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Weicher Schatten für Tiefeneffekt */
+	border: 5px solid rgba(255, 255, 255, 0.9);
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 
-	transition: transform 0.3s ease; /* Hover-Animation */
+	transition: transform 0.3s ease;
 }
 
-/* Optional: Bild hebt sich leicht an, wenn man darüber fährt */
 .hero-visual:hover .hero-img {
 	transform: translateY(-5px) scale(1.03);
 }
-/* Falls der Text 'Pika Pika!' über dem Bild sichtbar bleiben soll: */
+
 .hero-visual .big-title {
 	font-family: 'Baloo 2';
 	font-weight: 800;
@@ -263,7 +260,6 @@ nav.links a:hover {
 	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* ---------- SECTIONS / ROWS ---------- */
 main {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -367,7 +363,6 @@ main {
 	padding: 30px 0;
 }
 
-/* ---------- FOOTER ---------- */
 footer {
 	border-top: 1px solid var(--border);
 	background: var(--bg-alt);
@@ -424,7 +419,6 @@ footer {
 	display: block;
 }
 
-/* --- RESET & BASICS --- */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -436,14 +430,13 @@ footer {
 		sans-serif;
 }
 
-/* --- SITE HEADER (Glassmorphism & Fixed Top) --- */
 .site-header {
 	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba(15, 23, 42, 0.85); /* Halbtransparentes Dunkelblau */
-	backdrop-filter: blur(12px); /* Moderner Unscharf-Effekt */
+	background-color: rgba(15, 23, 42, 0.85);
+	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	z-index: 9999;
@@ -459,7 +452,6 @@ footer {
 	gap: 16px;
 }
 
-/* --- LOGO --- */
 .brand {
 	font-size: 1.35rem;
 	font-weight: 800;
@@ -472,12 +464,11 @@ footer {
 	color: #2dd4bf;
 }
 
-/* --- NAVIGATION BAR --- */
 .main-nav {
 	display: flex;
 	align-items: center;
-	gap: 2px; /* Dichte Abstände verhindern Zeilenumbruch */
-	flex-wrap: nowrap; /* Garantiert immer eine Zeile */
+	gap: 2px;
+	flex-wrap: nowrap;
 }
 
 .nav-item {
@@ -516,12 +507,11 @@ footer {
 	color: #f59e0b;
 }
 
-/* --- DROPDOWN HOVER-BRIDGE (Verhindert das Schließen beim Drüberfahren) --- */
 .dropdown-wrapper {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	padding-top: 10px; /* Unsichtbare Bridge zum Menü */
+	padding-top: 10px;
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(8px);
@@ -539,7 +529,6 @@ footer {
 	pointer-events: auto;
 }
 
-/* --- NORMALE DROPDOWNS --- */
 .dropdown-menu {
 	min-width: 200px;
 	background-color: #1a2332;
@@ -565,7 +554,6 @@ footer {
 	color: #f59e0b;
 }
 
-/* --- MEGA DROPDOWN (für Klassiker) --- */
 .mega-wrapper {
 	left: 0;
 }
@@ -612,7 +600,6 @@ footer {
 	transform: translateX(3px);
 }
 
-/* --- HIGHLIGHT CARD --- */
 .tipp-card {
 	background-color: rgba(255, 255, 255, 0.04);
 	border: 1px solid rgba(255, 255, 255, 0.08);
@@ -647,7 +634,6 @@ footer {
 	text-decoration: none;
 }
 
-/* --- SUCHLEISTE --- */
 .search-box {
 	position: relative;
 	display: flex;
@@ -680,7 +666,6 @@ footer {
 	width: 210px;
 }
 
-/* --- FOOTER MAIN --- */
 .site-footer {
 	background-color: #0b111e;
 	border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -702,7 +687,6 @@ footer {
 	gap: 40px;
 }
 
-/* --- SPALTE 1: BRAND --- */
 .footer-brand {
 	font-size: 1.5rem;
 	font-weight: 800;
@@ -735,7 +719,6 @@ footer {
 	font-weight: 600;
 }
 
-/* --- SPALTEN HEADINGS & LINKS --- */
 .footer-col h4 {
 	color: #ffffff;
 	font-size: 0.9rem;
@@ -770,7 +753,6 @@ footer {
 	transform: translateX(4px);
 }
 
-/* --- SPALTE 4: SOCIAL BUTTONS --- */
 .sub-text {
 	font-size: 0.82rem;
 	margin-bottom: 12px;
@@ -818,7 +800,6 @@ footer {
 	color: #e1306c;
 }
 
-/* --- FOOTER BOTTOM --- */
 .footer-bottom {
 	background-color: #070a12;
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -839,7 +820,6 @@ footer {
 	color: #475569;
 }
 
-/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 900px) {
 	.footer-container {
 		grid-template-columns: 1fr 1fr;
