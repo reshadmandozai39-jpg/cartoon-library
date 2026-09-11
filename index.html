@@ -3,9 +3,104 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Cartoon Library</title>
+		<title>CartoonHub Alle Cartoons an einem Ort</title>
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
 	</head>
 	<body>
-		This is the Cartoon Library.
+		<header>
+			<div class="nav-inner">
+				<div class="brand">Cartoon<span>Hub</span></div>
+				<nav class="links">
+					<a href="#klassiker">Klassiker</a>
+					<a href="#cartoonnetwork">Cartoon Network</a>
+					<a href="#anime">Anime &amp; Pokémon</a>
+					<a href="#filme">Filme</a>
+				</nav>
+				<div class="search-wrap">
+					<!-- <svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2">
+						<circle cx="11" cy="11" r="7" />
+						<line x1="21" y1="21" x2="16.6" y2="16.6" />
+					</svg> -->
+					<input
+						id="searchInput"
+						type="text"
+						placeholder="Cartoon suchen, z. B. Pikachu..."
+						autocomplete="off" />
+				</div>
+			</div>
+		</header>
+		<section class="hero">
+			<div class="hero-text">
+				<div class="eyebrow-strip"><span></span><span></span><span></span></div>
+				<h1>Jede Ära des Cartoons, an einem Ort.</h1>
+				<p>
+					Von Looney Tunes über Cartoon Network bis Pokémon und Anime – entdecke
+					Kurzbeschreibungen, Fakten und Empfehlungen zu über 30
+					Zeichentrickserien und -filmen.
+				</p>
+				<div class="hero-actions">
+					<button
+						class="btn btn-primary"
+						onclick="document.getElementById('klassiker').scrollIntoView()">
+						Serien entdecken
+					</button>
+					<button
+						class="btn btn-outline"
+						onclick="document.getElementById('searchInput').focus()">
+						Suchen
+					</button>
+				</div>
+			</div>
+			<div class="hero-visual">
+				<div class="big-title">Pika Pika!<br />Pokémon im Fokus</div>
+			</div>
+		</section>
+
+		<main id="results"></main>
+
+		<footer>
+			<div class="footer-inner">
+				<div>
+					<div class="brand" style="font-size: 20px">
+						Cartoon<span>Hub</span>
+					</div>
+					<p style="margin-top: 10px">
+						Eine Fan-Übersicht der schönsten Zeichentrickserien und -filme aus
+						mehreren Jahrzehnten.
+					</p>
+				</div>
+				<div>
+					<h4>Kategorien</h4>
+					<a href="#klassiker">Klassiker</a>
+					<a href="#cartoonnetwork">Cartoon Network</a>
+					<a href="#anime">Anime &amp; Pokémon</a>
+					<a href="#filme">Filme</a>
+				</div>
+				<div>
+					<h4>Info</h4>
+					<a href="#">Über uns</a>
+					<a href="#">Kontakt</a>
+					<a href="#">Impressum</a>
+					<a href="#">Datenschutz</a>
+				</div>
+				<div>
+					<h4>Folgen</h4>
+					<a href="#">Instagram</a>
+					<a href="#">YouTube</a>
+					<a href="#">Discord</a>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span
+					>© 2026 CartoonHub. Alle Serien und Filmrechte liegen bei ihren
+					jeweiligen Studios.</span
+				>
+				<span>Fanseite, nicht kommerziell.</span>
+			</div>
+		</footer>
 	</body>
 </html>
