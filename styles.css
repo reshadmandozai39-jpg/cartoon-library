@@ -408,3 +408,259 @@ footer {
 	object-fit: cover;
 	display: block;
 }
+
+/* --- RESET & BASICS --- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		sans-serif;
+}
+
+/* --- SITE HEADER (Glassmorphism & Fixed Top) --- */
+.site-header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(15, 23, 42, 0.85); /* Halbtransparentes Dunkelblau */
+	backdrop-filter: blur(12px); /* Moderner Unscharf-Effekt */
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	z-index: 9999;
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 12px 24px;
+	gap: 16px;
+}
+
+/* --- LOGO --- */
+.brand {
+	font-size: 1.35rem;
+	font-weight: 800;
+	color: #f59e0b;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.brand span {
+	color: #2dd4bf;
+}
+
+/* --- NAVIGATION BAR --- */
+.main-nav {
+	display: flex;
+	align-items: center;
+	gap: 2px; /* Dichte Abstände verhindern Zeilenumbruch */
+	flex-wrap: nowrap; /* Garantiert immer eine Zeile */
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 8px 10px;
+	color: #94a3b8;
+	text-decoration: none;
+	font-size: 0.82rem;
+	font-weight: 600;
+	white-space: nowrap;
+	border-radius: 6px;
+	transition: all 0.2s ease;
+}
+
+.nav-link .arrow {
+	font-size: 0.7rem;
+	transition: transform 0.2s ease;
+	opacity: 0.7;
+}
+
+.nav-link:hover,
+.nav-item:hover .nav-link,
+.nav-link.active {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:hover .arrow {
+	transform: rotate(180deg);
+	color: #f59e0b;
+}
+
+/* --- DROPDOWN HOVER-BRIDGE (Verhindert das Schließen beim Drüberfahren) --- */
+.dropdown-wrapper {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding-top: 10px; /* Unsichtbare Bridge zum Menü */
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(8px);
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease,
+		visibility 0.2s;
+	pointer-events: none;
+}
+
+.nav-item:hover .dropdown-wrapper {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+/* --- NORMALE DROPDOWNS --- */
+.dropdown-menu {
+	min-width: 200px;
+	background-color: #1a2332;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	padding: 8px 0;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu a {
+	display: block;
+	padding: 8px 16px;
+	color: #cbd5e1;
+	text-decoration: none;
+	font-size: 0.82rem;
+	transition:
+		background-color 0.15s,
+		color 0.15s;
+}
+
+.dropdown-menu a:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #f59e0b;
+}
+
+/* --- MEGA DROPDOWN (für Klassiker) --- */
+.mega-wrapper {
+	left: 0;
+}
+
+.mega-menu {
+	width: 720px;
+	background-color: #1a2332;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.menu-column {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.menu-column h4 {
+	color: #f59e0b;
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 4px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	padding-bottom: 4px;
+}
+
+.menu-column a {
+	color: #cbd5e1;
+	text-decoration: none;
+	font-size: 0.8rem;
+	transition:
+		color 0.15s,
+		transform 0.15s;
+}
+
+.menu-column a:hover {
+	color: #ffffff;
+	transform: translateX(3px);
+}
+
+/* --- HIGHLIGHT CARD --- */
+.tipp-card {
+	background-color: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.tipp-card .badge {
+	font-size: 0.62rem;
+	font-weight: 700;
+	color: #f59e0b;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.tipp-card h5 {
+	color: #ffffff;
+	font-size: 0.85rem;
+	margin-bottom: 2px;
+}
+
+.tipp-card p {
+	color: #94a3b8;
+	font-size: 0.72rem;
+	margin-bottom: 6px;
+}
+
+.tipp-card .card-btn {
+	color: #2dd4bf;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/* --- SUCHLEISTE --- */
+.search-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.search-icon {
+	position: absolute;
+	left: 10px;
+	font-size: 0.8rem;
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.search-box input {
+	background-color: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 20px;
+	padding: 6px 12px 6px 30px;
+	color: #ffffff;
+	font-size: 0.8rem;
+	outline: none;
+	width: 170px;
+	transition: all 0.25s ease;
+}
+
+.search-box input:focus {
+	background-color: rgba(255, 255, 255, 0.12);
+	border-color: #f59e0b;
+	width: 210px;
+}

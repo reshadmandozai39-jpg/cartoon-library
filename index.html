@@ -10,43 +10,169 @@
 			rel="stylesheet" /> -->
 
 		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<header>
-			<div class="nav-inner">
-				<div class="brand">Cartoon<span>Hub</span></div>
-				<nav class="links">
-					<a href="#klassiker">Klassiker</a>
-					<a href="#cartoonnetwork">Cartoon Network</a>
-					<a href="#anime">Anime &amp; Pokémon</a>
-					<a href="#filme">Filme</a>
-				</nav>
-				<div class="search-wrap">
-					<svg
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2">
-						<circle cx="11" cy="11" r="7" />
-						<line x1="21" y1="21" x2="16.6" y2="16.6" />
-					</svg>
-					<input
-						id="searchInput"
-						type="text"
-						placeholder="Cartoon suchen, z. B. Pikachu..."
-						autocomplete="off" />
-				</div>
-			</div>
-		</header>
+
+
+   <header class="site-header">
+  <div class="nav-container">
+    <!-- Brand / Logo -->
+    <a href="#" class="brand">Cartoon<span>Hub</span></a>
+
+    <!-- Hauptnavigation -->
+    <nav class="main-nav">
+      
+      <!-- 1. Klassiker -->
+      <div class="nav-item mega-item">
+        <a href="#klassiker" class="nav-link active">Klassiker <span class="arrow">▾</span></a>
+        
+        <!-- Mega Menu -->
+        <div class="dropdown-wrapper mega-wrapper">
+          <div class="mega-menu">
+            <div class="menu-column">
+              <h4>Golden Era</h4>
+              <a href="#looney-tunes">Looney Tunes</a>
+              <a href="#tom-jerry">Tom &amp; Jerry</a>
+              <a href="#feuerstein">Familie Feuerstein</a>
+              <a href="#panther">Rosaroter Panther</a>
+              <a href="#popeye">Popeye</a>
+            </div>
+            <div class="menu-column">
+              <h4>80er &amp; 90er Kult</h4>
+              <a href="#scooby-doo">Scooby-Doo</a>
+              <a href="#ducktales">DuckTales</a>
+              <a href="#tmnt">TMNT Turtles</a>
+              <a href="#gummibaeren">Gummibärenbande</a>
+              <a href="#gadget">Inspector Gadget</a>
+            </div>
+            <div class="menu-column">
+              <h4>Beliebte Genres</h4>
+              <a href="#slapstick">Slapstick &amp; Comedy</a>
+              <a href="#abenteuer">Abenteuer</a>
+              <a href="#zeichentrick">Zeichen-Klassiker</a>
+            </div>
+            <div class="menu-column highlight-column">
+              <div class="tipp-card">
+                <span class="badge">🏆 TIPP DER WOCHE</span>
+                <h5>LOONEY TUNES</h5>
+                <p>Bugs Bunny &amp; Co. entdecken.</p>
+                <a href="#looney-tunes" class="card-btn">Ansehen &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Cartoon Network -->
+      <div class="nav-item">
+        <a href="#cartoonnetwork" class="nav-link">Cartoon Network <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#ben10">Ben 10</a>
+            <a href="#adventure-time">Adventure Time</a>
+            <a href="#powerpuff">Powerpuff Girls</a>
+            <a href="#dexter">Dexters Labor</a>
+            <a href="#gumball">Gumball</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Anime & Pokémon -->
+      <div class="nav-item">
+        <a href="#anime" class="nav-link">Anime &amp; Pokémon <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#pokemon">Pokémon</a>
+            <a href="#dragonball">Dragon Ball Z</a>
+            <a href="#naruto">Naruto</a>
+            <a href="#one-piece">One Piece</a>
+            <a href="#yugioh">Yu-Gi-Oh!</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Action & Abenteuer -->
+      <div class="nav-item">
+        <a href="#action" class="nav-link">Action &amp; Abenteuer <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#avatar">Avatar</a>
+            <a href="#clone-wars">Star Wars: Clone Wars</a>
+            <a href="#kim-possible">Kim Possible</a>
+            <a href="#ninjago">Ninjago</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Retro Cartoons -->
+      <div class="nav-item">
+        <a href="#retro" class="nav-link">Retro Cartoons <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#he-man">He-Man</a>
+            <a href="#thundercats">ThunderCats</a>
+            <a href="#captain-future">Captain Future</a>
+            <a href="#jetsons">Die Jetsons</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Familienserien -->
+      <div class="nav-item">
+        <a href="#familie" class="nav-link">Familienserien <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#simpsons">Die Simpsons</a>
+            <a href="#spongebob">SpongeBob</a>
+            <a href="#phineas-ferb">Phineas und Ferb</a>
+            <a href="#gravity-falls">Gravity Falls</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Superhelden -->
+      <div class="nav-item">
+        <a href="#superhelden" class="nav-link">Superhelden <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#batman">Batman: Animated Series</a>
+            <a href="#spiderman">Spider-Man (90s)</a>
+            <a href="#x-men">X-Men</a>
+            <a href="#teen-titans">Teen Titans</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Fantasy & Sci-Fi -->
+      <div class="nav-item">
+        <a href="#fantasy" class="nav-link">Fantasy &amp; Sci-Fi <span class="arrow">▾</span></a>
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <a href="#futurama">Futurama</a>
+            <a href="#rick-morty">Rick and Morty</a>
+            <a href="#owl-house">Willkommen im Haus der Eulen</a>
+            <a href="#danny-phantom">Danny Phantom</a>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- Suchleiste -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Cartoon suchen..." autocomplete="off">
+    </div>
+  </div>
+</header>
+</header>
 
 		<section class="hero">
 			<div class="hero-text">
 				<div class="eyebrow-strip"><span></span><span></span><span></span></div>
 				<h1>Jede Ära des Cartoons, an einem Ort.</h1>
 				<p>
-					Von Looney Tunes über Cartoon Network bis Pokémon und Anime – entdecke
+					Von Looney Tunes über Cartoon Network bis Pokémon und Anime entdecke
 					Kurzbeschreibungen, Fakten und Empfehlungen zu über 30
-					Zeichentrickserien und -filmen.
+					Zeichentrickserien und filmen.
 				</p>
 				<div class="hero-actions">
 					<button
@@ -102,7 +228,7 @@
 			</div>
 			<div class="footer-bottom">
 				<span
-					>© 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei ihren
+					>© 2026 CartoonHub. Alle Serien und Filmrechte liegen bei ihren
 					jeweiligen Studios.</span
 				>
 				<span>Fanseite, nicht kommerziell.</span>
