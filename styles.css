@@ -227,25 +227,40 @@ nav.links a:hover {
 	border-color: var(--teal);
 	color: var(--teal);
 }
-.hero-visual {
-	flex: 0 0 280px;
-	height: 340px;
-	border-radius: 16px;
-	background: linear-gradient(160deg, var(--teal), #245c53);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	overflow: hidden;
-	box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+
+.hero-visual .hero-img {
+	width: 45%; /* Etwas größer, damit das Bild besser wirkt */
+	height: auto; /* Behält das Seitenverhältnis bei */
+	max-height: 75%;
+	object-fit: cover;
+
+	position: absolute;
+	bottom: -10px; /* Lässt das Bild leicht über den unteren Rand ragen */
+	right: 12px;
+	z-index: 2;
+
+	border: 5px solid rgba(255, 255, 255, 0.9); /* 5px weißer Rahmen */
+	border-radius: 16px; /* Abgerundete Ecken passend zur Karte */
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Weicher Schatten für Tiefeneffekt */
+
+	transition: transform 0.3s ease; /* Hover-Animation */
 }
+
+/* Optional: Bild hebt sich leicht an, wenn man darüber fährt */
+.hero-visual:hover .hero-img {
+	transform: translateY(-5px) scale(1.03);
+}
+/* Falls der Text 'Pika Pika!' über dem Bild sichtbar bleiben soll: */
 .hero-visual .big-title {
 	font-family: 'Baloo 2';
 	font-weight: 800;
 	font-size: 22px;
 	text-align: center;
 	padding: 0 20px;
-	color: #0d2521;
+	color: #ffffff;
+	position: relative;
+	z-index: 2;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* ---------- SECTIONS / ROWS ---------- */
