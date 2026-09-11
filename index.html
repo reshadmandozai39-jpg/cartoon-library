@@ -158,7 +158,7 @@
 
     <!-- Suchleiste -->
     <div class="search-box">
-      <span class="search-icon">🔍</span>
+      <span class="search-icon"></span>
       <input type="text" id="searchInput" placeholder="Cartoon suchen..." autocomplete="off">
     </div>
   </div>
@@ -193,47 +193,71 @@
 		</section>
 
 		<main id="results"></main>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Spalte 1: Brand & Über uns -->
+    <div class="footer-col brand-col">
+      <a href="#" class="footer-brand">Cartoon<span>Hub</span></a>
+      <p class="brand-desc">
+        Deine ultimative Fan-Übersicht für Nostalgie, Kult-Cartoons und aktuelle Zeichentrickserien aus mehreren Jahrzehnten.
+      </p>
+      <div class="fan-badge">
+        <span> Non-Profit Fanprojekt</span>
+      </div>
+    </div>
 
-		<footer>
-			<div class="footer-inner">
-				<div>
-					<div class="brand" style="font-size: 20px">
-						Cartoon<span>Hub</span>
-					</div>
-					<p style="margin-top: 10px">
-						Eine Fan-Übersicht der schönsten Zeichentrickserien und -filme aus
-						mehreren Jahrzehnten.
-					</p>
-				</div>
-				<div>
-					<h4>Kategorien</h4>
-					<a href="#klassiker">Klassiker</a>
-					<a href="#cartoonnetwork">Cartoon Network</a>
-					<a href="#anime">Anime &amp; Pokémon</a>
-					<a href="#filme">Filme</a>
-				</div>
-				<div>
-					<h4>Info</h4>
-					<a href="#">Über uns</a>
-					<a href="#">Kontakt</a>
-					<a href="#">Impressum</a>
-					<a href="#">Datenschutz</a>
-				</div>
-				<div>
-					<h4>Folgen</h4>
-					<a href="#">Instagram</a>
-					<a href="#">YouTube</a>
-					<a href="#">Discord</a>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<span
-					>© 2026 CartoonHub. Alle Serien und Filmrechte liegen bei ihren
-					jeweiligen Studios.</span
-				>
-				<span>Fanseite, nicht kommerziell.</span>
-			</div>
-		</footer>
+    <!-- Spalte 2: Kategorien -->
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul class="footer-links">
+        <li><a href="#klassiker">Klassiker (50er-90er)</a></li>
+        <li><a href="#cartoonnetwork">Cartoon Network</a></li>
+        <li><a href="#anime">Anime &amp; Pokémon</a></li>
+        <li><a href="#action">Action &amp; Abenteuer</a></li>
+        <li><a href="#superhelden">Superhelden Cartoons</a></li>
+      </ul>
+    </div>
+
+    <!-- Spalte 3: Information & Rechtliches -->
+    <div class="footer-col">
+      <h4>Informationen</h4>
+      <ul class="footer-links">
+        <li><a href="#ueber-uns">Über das Projekt</a></li>
+        <li><a href="#kontakt">Kontakt &amp; Feedback</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+        <li><a href="#datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
+
+    <!-- Spalte 4: Social Community & Newsletter -->
+    <div class="footer-col community-col">
+      <h4>Community &amp; Folgen</h4>
+      <p class="sub-text">Tritt unserer Cartoon-Community bei:</p>
+      
+      <div class="social-badges">
+        <a href="#discord" class="social-btn discord">
+          <span class="icon">💬</span> Discord
+        </a>
+        <a href="#youtube" class="social-btn youtube">
+          <span class="icon">▶</span> YouTube
+        </a>
+        <a href="#instagram" class="social-btn instagram">
+          <span class="icon">📷</span> Instagram
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Untere Leiste (Copyright & Disclaimer) -->
+  <div class="footer-bottom">
+    <div class="bottom-container">
+      <p>&copy; 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei den jeweiligen Studios.</p>
+      <p class="disclaimer">Inoffizielle Fanseite &bull; Nicht kommerziell</p>
+    </div>
+  </div>
+</footer>
 
 		<script src="data.js"></script>
 		<script src="app.js"></script>
