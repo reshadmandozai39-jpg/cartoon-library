@@ -1,0 +1,372 @@
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+	position: relative;
+	padding: 64px 24px 56px;
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	flex-wrap: wrap;
+}
+
+.hero-text {
+	flex: 1 1 420px;
+}
+
+.eyebrow-strip {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 18px;
+}
+
+.eyebrow-strip span {
+	width: 22px;
+	height: 14px;
+	background: var(--gold);
+	border-radius: 2px;
+	opacity: 0.85;
+}
+
+.eyebrow-strip span:nth-child(2) {
+	background: var(--teal);
+}
+.eyebrow-strip span:nth-child(3) {
+	background: #d96b6b;
+}
+
+.hero h1 {
+	font-size: 44px;
+	margin-bottom: 16px;
+	line-height: 1.1;
+}
+
+.hero p {
+	color: var(--text-dim);
+	font-size: 16px;
+	margin-bottom: 26px;
+}
+
+.hero-actions {
+	display: flex;
+	gap: 14px;
+}
+
+.btn {
+	padding: 12px 22px;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	border: none;
+	transition: all 0.15s ease;
+}
+
+.btn-primary {
+	background: var(--gold);
+	color: #1a1204;
+}
+
+.btn-primary:hover {
+	background: #ffb94d;
+}
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid var(--border);
+	color: var(--text);
+}
+
+.btn-outline:hover {
+	border-color: var(--teal);
+	color: var(--teal);
+}
+
+.hero-visual {
+	position: relative;
+	flex: 1 1 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 250px;
+}
+
+.hero-visual .hero-img {
+	width: 80%;
+	height: auto;
+	max-height: 260px;
+	object-fit: cover;
+	border: 4px solid rgba(255, 255, 255, 0.9);
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease;
+}
+
+.hero-visual:hover .hero-img {
+	transform: translateY(-5px) scale(1.02);
+}
+
+.hero-visual .big-title {
+	position: absolute;
+	bottom: 10px;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+main {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0 24px 60px;
+}
+
+.row-scroll {
+	display: flex;
+	gap: 16px;
+	overflow-x: auto;
+	padding: 10px 4px 20px;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/Edge */
+}
+
+.card {
+	flex: 0 0 210px;
+	scroll-snap-align: start;
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	transition: all 0.25s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px) scale(1.02);
+	border-color: var(--gold);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+	background: var(--card-hover);
+}
+
+.card-thumb {
+	width: 100%;
+	height: 130px;
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card-thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.card:hover .card-thumb img {
+	transform: scale(1.08);
+}
+
+.card-body {
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.card-title {
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--text);
+	margin-bottom: 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.card-desc {
+	font-size: 12px;
+	color: var(--text-dim);
+	margin-bottom: 12px;
+	line-height: 1.4;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.card-tag {
+	margin-top: auto;
+	font-size: 11px;
+	color: var(--gold);
+	font-weight: 700;
+}
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE BREAKPOINTS
+   ========================================== */
+@media (max-width: 900px) {
+	.burger {
+		display: flex;
+	}
+
+	.main-nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: rgba(15, 23, 42, 0.98);
+		backdrop-filter: blur(16px);
+		flex-direction: column;
+		padding: 20px;
+		border-bottom: 1px solid var(--border);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	}
+
+	.main-nav.active {
+		display: flex;
+	}
+
+	.nav-item {
+		width: 100%;
+	}
+
+	.dropdown-wrapper {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		display: none;
+	}
+
+	.nav-item:hover .dropdown-wrapper {
+		display: block;
+	}
+
+	.mega-menu {
+		width: 100%;
+		grid-template-columns: 1fr;
+	}
+
+	.footer-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.search-box input {
+		width: 140px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		flex-direction: column;
+		padding: 30px 16px;
+	}
+
+	.hero h1 {
+		font-size: 32px;
+	}
+
+	.search-box input {
+		width: 120px;
+	}
+}
+
+@media (max-width: 550px) {
+	.footer-container {
+		grid-template-columns: 1fr;
+	}
+	.bottom-container {
+		flex-direction: column;
+		gap: 8px;
+		text-align: center;
+	}
+} /* Container für die gesamte Karten-Reihe inkl. Buttons */
+.slider-container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* Versteckt den Scrollbalken, erlaubt aber das Scrollen via JS */
+.row-scroll {
+	display: flex;
+	gap: 16px;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	width: 100%;
+	padding: 12px 4px;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/Edge */
+}
+
+.row-scroll::-webkit-scrollbar {
+	display: none; /* Chrome/Safari */
+}
+
+/* Karten Styling */
+.card {
+	flex: 0 0 220px;
+	background: #1f2444;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+/* Pfeil-Buttons Anpassung */
+.slide-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 44px;
+	height: 44px;
+	background-color: rgba(15, 23, 42, 0.85);
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	font-size: 18px;
+	cursor: pointer;
+	z-index: 10;
+	backdrop-filter: blur(6px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+	transition: all 0.2s ease;
+}
+
+.slide-btn:hover {
+	background-color: #f59e0b;
+	color: #000000;
+	border-color: #f59e0b;
+	scale: 1.1;
+}
+
+/* Positionierung ganz links und rechts */
+.prev-btn {
+	left: -15px;
+}
+
+.next-btn {
+	right: -15px;
+}
+
+/* Auf mobilen Geräten Pfeile leicht einrücken */
+@media (max-width: 768px) {
+	.prev-btn {
+		left: 2px;
+	}
+	.next-btn {
+		right: 2px;
+	}
+}
