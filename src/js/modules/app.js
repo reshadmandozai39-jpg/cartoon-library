@@ -84,7 +84,6 @@ function scrollRow(button, direction) {
 	});
 }
 
-// Make scrollRow globally available for inline onclick attributes
 window.scrollRow = scrollRow;
 
 document.addEventListener('DOMContentLoaded', () => {

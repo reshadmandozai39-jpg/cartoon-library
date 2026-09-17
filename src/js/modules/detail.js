@@ -10,7 +10,6 @@ if (cartoon) {
 
 	document.getElementById('detailTitle').innerText = cartoon.title;
 
-	// Resolve image path relative to src/pages/detail.html
 	let imgSrc = cartoon.img;
 	if (imgSrc.startsWith('./')) {
 		imgSrc = '../..' + imgSrc.slice(1);
