@@ -415,45 +415,6 @@
 			</table>
 		</section>
 
-		<section class="landing-section contact-preview">
-			<div class="section-intro">
-				<p class="kicker">Kontakt</p>
-				<h2>Fragen zu Serien, Ideen oder Designprojekten?</h2>
-			</div>
-			<div class="contact-box">
-				<form id="kontaktform" class="kontakt-form">
-					<label>
-						Name*
-						<input
-							type="text"
-							name="name"
-							required
-							minlength="2"
-							placeholder="Dein Name" />
-					</label>
-					<label>
-						E-Mail*
-						<input
-							type="email"
-							name="email"
-							required
-							placeholder="deine@email.ch" />
-					</label>
-					<label>
-						Nachricht*
-						<textarea
-							name="nachricht"
-							required
-							minlength="10"
-							placeholder="Deine Nachricht..."></textarea>
-					</label>
-					<button type="submit" class="btn btn-primary">
-						Nachricht senden
-					</button>
-				</form>
-			</div>
-		</section>
-
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
 				const form = document.getElementById('kontaktform');
@@ -474,47 +435,34 @@
 				<div class="footer-col brand-col">
 					<a href="index.html" class="footer-brand">Cartoon<span>Hub</span></a>
 					<p class="brand-desc">
-						Deine ultimative Fan-Übersicht für Nostalgie, Kult-Cartoons und
-						aktuelle Zeichentrickserien aus mehreren Jahrzehnten.
+						Deine Übersicht für ikonische Serien, Figuren und Cartoon-Momente.
 					</p>
-					<div class="fan-badge">
-						<span>Non-Profit Fanprojekt</span>
-					</div>
 				</div>
-
 				<div class="footer-col">
-					<h4>Navigation</h4>
+					<h4>Nav</h4>
 					<ul class="footer-links">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="src/pages/serien.html">Serien</a></li>
 						<li><a href="src/pages/preise.html">Preise</a></li>
-						<li><a href="src/pages/kontakt.html">Kontakt</a></li>
 					</ul>
 				</div>
-
 				<div class="footer-col">
-					<h4>Informationen</h4>
+					<h4>Info</h4>
 					<ul class="footer-links">
+						<li><a href="src/pages/kontakt.html">Kontakt</a></li>
 						<li><a href="src/pages/ueber-uns.html">Über uns</a></li>
 						<li><a href="src/pages/impressum.html">Impressum</a></li>
-						<li><a href="src/pages/serien.html">Katalog</a></li>
-						<li><a href="src/pages/kontakt.html">Feedback</a></li>
 					</ul>
 				</div>
 			</div>
-
 			<div class="footer-bottom">
 				<div class="bottom-container">
-					<p>
-						&copy; 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei den
-						jeweiligen Studios.
-					</p>
-					<p class="disclaimer">
-						Inoffizielle Fanseite &bull; Nicht kommerziell
-					</p>
+					<span>© 2026 CartoonHub</span
+					><span>Mit Liebe für Cartoon-Fans gestaltet.</span>
 				</div>
 			</div>
 		</footer>
+
 		<script type="module" src="./src/js/modules/app.js"></script>
 	</body>
 </html>

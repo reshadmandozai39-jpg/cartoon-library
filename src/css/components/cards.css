@@ -149,15 +149,57 @@ main {
 }
 
 .subtitle {
-	display: inline-flex;
+	font-family: inherit;
+	font-size: 18px;
+	background: rgb(210, 213, 228);
+	color: rgb(15, 15, 15);
+	padding: 0.7em 1em;
+	padding-left: 0.9em;
+	display: flex;
 	align-items: center;
-	padding: 6px 10px;
-	border-radius: 999px;
-	font-size: 0.72rem;
-	font-weight: 700;
-	color: var(--text-dim);
-	background: var(--surface);
-	border: 1px solid var(--border);
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.subtitle span {
+	display: block;
+	margin-left: 0.3em;
+	transition: all 0.3s ease-in-out;
+}
+
+.subtitle svg {
+	display: block;
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.subtitle:hover .svg-wrapper {
+	animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.subtitle:hover svg {
+	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.subtitle:hover span {
+	transform: translateX(5em);
+}
+
+.subtitle:active {
+	transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+	from {
+		transform: translateY(0.1em);
+	}
+
+	to {
+		transform: translateY(-0.1em);
+	}
 }
 
 .slider-container {
