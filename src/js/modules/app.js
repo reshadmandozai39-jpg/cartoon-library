@@ -1,6 +1,13 @@
 import { CARTOONS, CATEGORIES } from '../data/data.js';
 
 function cardHTML(item) {
+	const rating = (4.2 + ((item.title.length * 17) % 7) / 10).toFixed(1);
+	const fans = Math.max(
+		1200,
+		Math.round((item.title.length + item.genre.length) * 220),
+	);
+	const formattedFans = `${(fans / 1000).toFixed(fans >= 10000 ? 0 : 1)}K`;
+
 	return `
     <a class="card" href="./src/pages/detail.html?id=${item.id}">
       <div class="card-thumb">
@@ -9,9 +16,13 @@ function cardHTML(item) {
       </div>
 
       <div class="card-body">
+        <div class="card-meta">
+          <span class="card-rating">⭐ ${rating}</span>
+          <span>${formattedFans} Fans</span>
+        </div>
         <h3 class="card-title">${item.title}</h3>
         <p class="card-desc">${item.short}</p>
-        <span class="card-tag">Mehr erfahren →</span>
+        <span class="card-tag">Mehr erfahren <span aria-hidden="true">→</span></span>
       </div>
     </a>
   `;
@@ -97,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const applyTheme = (theme) => {
 		document.body.setAttribute('data-theme', theme);
 		if (themeIcon) {
-			themeIcon.textContent = theme === 'light' ? 'Dark' : 'Lgiht';
+			themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
 		}
 		localStorage.setItem('cartoon-theme', theme);
 	};

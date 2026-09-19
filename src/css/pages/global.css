@@ -1,34 +1,46 @@
 :root {
-	--bg: #0f172a;
-	--bg-alt: #1e293b;
-	--card: #1f2444;
-	--card-hover: #262c54;
-	--gold: #f59e0b;
-	--teal: #2dd4bf;
-	--text: #f8fafc;
-	--text-dim: #94a3b8;
-	--border: rgba(255, 255, 255, 0.08);
-	--header-bg: #64748b;
-	--header-strong: rgba(15, 23, 42, 0.9);
-	--surface: rgba(255, 255, 255, 0.06);
-	--surface-strong: rgba(255, 255, 255, 0.12);
-	--radius: 12px;
+	--bg: #0b1020;
+	--bg-alt: #111c2f;
+	--card: #121b2d;
+	--card-hover: #182542;
+	--gold: #f7b84b;
+	--teal: #53d6c6;
+	--text: #edf3ff;
+	--text-dim: #a5b4d1;
+	--border: rgba(255, 255, 255, 0.1);
+	--header-bg: rgba(15, 23, 42, 0.78);
+	--surface: rgba(255, 255, 255, 0.05);
+	--surface-strong: rgba(255, 255, 255, 0.1);
+	--footer-bg: linear-gradient(
+		180deg,
+		rgba(15, 23, 42, 0.9),
+		rgba(2, 6, 23, 1)
+	);
+	--footer-bottom-bg: rgba(2, 6, 23, 0.96);
+	--shadow: 0 18px 40px rgba(15, 23, 42, 0.32);
+	--radius: 16px;
 }
 
 body[data-theme='light'] {
-	--bg: #f8fafc;
-	--bg-alt: #e2e8f0;
+	--bg: #f5f7fb;
+	--bg-alt: #eaf0f7;
 	--card: #ffffff;
-	--card-hover: #f1f5f9;
+	--card-hover: #f2f6ff;
 	--gold: #d97706;
 	--teal: #0f766e;
-	--text: #0f172a;
-	--text-dim: #475569;
-	--border: rgba(15, 23, 42, 0.12);
-	--header-bg: rgba(255, 255, 255, 0.9);
-	--header-strong: rgba(255, 255, 255, 0.96);
+	--text: #111827;
+	--text-dim: #54657f;
+	--border: rgba(15, 23, 42, 0.1);
+	--header-bg: rgba(255, 255, 255, 0.82);
 	--surface: rgba(15, 23, 42, 0.04);
 	--surface-strong: rgba(15, 23, 42, 0.08);
+	--footer-bg: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.96),
+		rgba(226, 232, 240, 0.96)
+	);
+	--footer-bottom-bg: rgba(15, 23, 42, 0.98);
+	--shadow: 0 20px 30px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -37,13 +49,40 @@ body[data-theme='light'] {
 	padding: 0;
 	font-family:
 		'Inter',
+		'Segoe UI',
 		system-ui,
 		-apple-system,
 		sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	background-color: var(--bg);
+	background:
+		radial-gradient(
+			circle at top left,
+			rgba(83, 214, 198, 0.1),
+			transparent 28%
+		),
+		radial-gradient(
+			circle at top right,
+			rgba(247, 184, 75, 0.08),
+			transparent 26%
+		),
+		var(--bg);
 	color: var(--text);
-	transition: background-color 0.25s ease, color 0.25s ease;
+	transition:
+		background-color 0.25s ease,
+		color 0.25s ease;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	-webkit-tap-highlight-color: transparent;
 }

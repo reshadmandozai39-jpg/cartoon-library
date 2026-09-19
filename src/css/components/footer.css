@@ -1,21 +1,22 @@
 .site-footer {
-	background-color: #64748b;
+	background: var(--footer-bg);
 	border-top: 1px solid var(--border);
-	padding-top: 50px;
+	padding-top: 52px;
 }
 
 .footer-container {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 24px 40px;
+	padding: 0 24px 42px;
 	display: grid;
-	grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-	gap: 40px;
+	grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+	gap: 36px;
 }
 
 .footer-brand {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	font-weight: 800;
+	letter-spacing: -0.04em;
 	color: var(--gold);
 	text-decoration: none;
 	display: inline-block;
@@ -27,16 +28,17 @@
 }
 
 .brand-desc {
-	font-size: 0.85rem;
-	line-height: 1.6;
+	font-size: 0.88rem;
+	line-height: 1.7;
 	color: var(--text-dim);
 	margin-bottom: 16px;
 }
 
 .footer-col h4 {
-	color: #ffffff;
-	font-size: 0.9rem;
-	font-weight: 700;
+	color: var(--text);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	margin-bottom: 16px;
 }
@@ -52,7 +54,7 @@
 .footer-links a {
 	color: var(--text-dim);
 	text-decoration: none;
-	font-size: 0.85rem;
+	font-size: 0.84rem;
 	transition: all 0.2s ease;
 }
 
@@ -64,34 +66,36 @@
 .social-badges {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 10px;
 }
 
 .social-btn {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	background-color: rgba(255, 255, 255, 0.04);
+	background: rgba(255, 255, 255, 0.04);
 	border: 1px solid var(--border);
-	padding: 8px 14px;
-	border-radius: 8px;
-	color: #cbd5e1;
+	padding: 9px 12px;
+	border-radius: 10px;
+	color: var(--text);
 	text-decoration: none;
 	font-size: 0.82rem;
+	font-weight: 600;
 	transition: all 0.2s ease;
 }
 
 .social-btn:hover {
-	background-color: rgba(255, 255, 255, 0.08);
-	color: #ffffff;
+	background: rgba(255, 255, 255, 0.07);
+	color: var(--text);
+	transform: translateY(-1px);
 }
 
 .footer-bottom {
-	background-color: #070a12;
+	background: var(--footer-bottom-bg);
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
-	padding: 16px 24px;
+	padding: 18px 24px;
 	font-size: 0.78rem;
-	color: #64748b;
+	color: #8aa0c2;
 }
 
 .bottom-container {
@@ -99,4 +103,6 @@
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	gap: 16px;
+	align-items: center;
 }

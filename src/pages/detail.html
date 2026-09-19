@@ -13,15 +13,59 @@
 			</div>
 		</header>
 
-		<main
-			class="container"
-			style="max-width: 800px; margin: 40px auto; padding: 0 20px">
-			<a href="../../index.html" class="back-link">← Zurück zur Übersicht</a>
+		<main class="detail-main">
+			<div class="detail-shell">
+				<a href="../../index.html" class="back-link">← Zurück zur Übersicht</a>
 
-			<div class="detail-card">
-				<h1 id="detailTitle">Lade Titel...</h1>
-				<img id="detailImage" src="" alt="" />
-				<p id="detailDescription">Lade Beschreibung...</p>
+				<div class="detail-card">
+					<div class="detail-header">
+						<div>
+							<span class="detail-eyebrow">Cartoon Highlight</span>
+							<h1 id="detailTitle">Lade Titel...</h1>
+						</div>
+						<div class="detail-actions">
+							<a href="../../index.html" class="btn btn-primary"
+								>Mehr entdecken</a
+							>
+							<button
+								class="btn btn-outline"
+								type="button"
+								onclick="window.history.back()">
+								Zurück
+							</button>
+						</div>
+					</div>
+
+					<div class="detail-content">
+						<div class="detail-media">
+							<img id="detailImage" src="" alt="" />
+							<div class="detail-badges">
+								<span id="detailGenre">Genre</span>
+								<span id="detailRating">⭐ 4.8</span>
+								<span id="detailFans">12K Fans</span>
+							</div>
+						</div>
+
+						<div class="detail-info">
+							<p id="detailDescription">Lade Beschreibung...</p>
+
+							<div class="detail-stats">
+								<div class="stat-item">
+									<span>Genre</span>
+									<strong id="detailGenreStat">-</strong>
+								</div>
+								<div class="stat-item">
+									<span>Bewertung</span>
+									<strong id="detailRatingStat">-</strong>
+								</div>
+								<div class="stat-item">
+									<span>Fans</span>
+									<strong id="detailFansStat">-</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 

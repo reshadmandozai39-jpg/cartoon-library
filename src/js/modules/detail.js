@@ -10,6 +10,13 @@ if (cartoon) {
 
 	document.getElementById('detailTitle').innerText = cartoon.title;
 
+	const rating = (4.2 + ((cartoon.title.length * 17) % 7) / 10).toFixed(1);
+	const fans = Math.max(
+		1200,
+		Math.round((cartoon.title.length + cartoon.genre.length) * 220),
+	);
+	const formattedFans = `${(fans / 1000).toFixed(fans >= 10000 ? 0 : 1)}K`;
+
 	let imgSrc = cartoon.img;
 	if (imgSrc.startsWith('./')) {
 		imgSrc = '../..' + imgSrc.slice(1);
@@ -26,6 +33,12 @@ if (cartoon) {
 	}
 
 	document.getElementById('detailDescription').innerText = cartoon.short;
+	document.getElementById('detailGenre').innerText = cartoon.genre;
+	document.getElementById('detailRating').innerText = `⭐ ${rating}/5`;
+	document.getElementById('detailFans').innerText = `${formattedFans} Fans`;
+	document.getElementById('detailGenreStat').innerText = cartoon.genre;
+	document.getElementById('detailRatingStat').innerText = `${rating}/5`;
+	document.getElementById('detailFansStat').innerText = `${formattedFans} Fans`;
 } else {
 	document.getElementById('detailTitle').innerText = 'Serie nicht gefunden';
 	document.getElementById('detailDescription').innerText =
