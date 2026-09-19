@@ -1,16 +1,19 @@
 .hero {
-	position: relative;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 72px 24px 52px;
 	display: flex;
 	align-items: center;
-	gap: 52px;
+	justify-content: space-between;
+
 	flex-wrap: wrap;
 }
 
 .hero-text {
-	flex: 1 1 430px;
+	flex: 1 1 400px;
+	padding-left: 24px;
+}
+
+.hero-visual {
+	flex: 1 1 400px;
+	position: relative;
 }
 
 .eyebrow-strip {
