@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Detailseite – CartoonHub</title>
+		<title>Über uns – CartoonHub</title>
 		<link rel="stylesheet" href="../css/pages/styles.css" />
 	</head>
 	<body>
@@ -14,11 +14,10 @@
 					class="burger"
 					id="burgerBtn"
 					aria-label="Menü öffnen"
-					aria-expanded="false"
 					type="button">
 					<span></span><span></span><span></span>
 				</button>
-				<nav class="main-nav detail-nav">
+				<nav class="main-nav">
 					<a href="../../index.html" class="nav-link">Home</a>
 					<a href="serien.html" class="nav-link">Serien</a>
 					<a href="preise.html" class="nav-link">Preise</a>
@@ -35,60 +34,32 @@
 			</div>
 		</header>
 
-		<main class="detail-main">
-			<div class="detail-shell">
-				<a href="../../index.html" class="back-link">← Zurück zur Übersicht</a>
+		<main class="page-main">
+			<section class="page-hero small-hero">
+				<p class="kicker">Über uns</p>
+				<h1>Mehr als nur eine Serienliste</h1>
+				<p>
+					CartoonHub verbindet Nostalgie, moderne Animation und kreative
+					Wahrnehmung in einer modernen Übersicht.
+				</p>
+			</section>
 
-				<div class="detail-card">
-					<div class="detail-header">
-						<div>
-							<span class="detail-eyebrow">Cartoon Highlight</span>
-							<h1 id="detailTitle">Lade Titel...</h1>
-						</div>
-						<div class="detail-actions">
-							<a href="../../index.html" class="btn btn-primary"
-								>Mehr entdecken</a
-							>
-							<button
-								class="btn btn-outline"
-								type="button"
-								onclick="window.history.back()">
-								Zurück
-							</button>
-						</div>
-					</div>
-
-					<div class="detail-content">
-						<div class="detail-media">
-							<img id="detailImage" src="" alt="" />
-							<div class="detail-badges">
-								<span id="detailGenre">Genre</span>
-								<span id="detailRating">⭐ 4.8</span>
-								<span id="detailFans">12K Fans</span>
-							</div>
-						</div>
-
-						<div class="detail-info">
-							<p id="detailDescription">Lade Beschreibung...</p>
-
-							<div class="detail-stats">
-								<div class="stat-item">
-									<span>Genre</span>
-									<strong id="detailGenreStat">-</strong>
-								</div>
-								<div class="stat-item">
-									<span>Bewertung</span>
-									<strong id="detailRatingStat">-</strong>
-								</div>
-								<div class="stat-item">
-									<span>Fans</span>
-									<strong id="detailFansStat">-</strong>
-								</div>
-							</div>
-						</div>
-					</div>
+			<section class="page-content-grid text-only-grid">
+				<div class="info-card">
+					<h2>Unsere Idee</h2>
+					<p>
+						Wir möchten Cartoon- und Animationswelten verständlich, attraktiv
+						und inspirierend präsentieren.
+					</p>
 				</div>
-			</div>
+				<div class="info-card">
+					<h2>Unser Fokus</h2>
+					<p>
+						Klare Kategorien, hochwertige Darstellung und eine
+						community-friendly Struktur für Fans und Kreative.
+					</p>
+				</div>
+			</section>
 		</main>
 
 		<footer class="site-footer">
@@ -125,8 +96,6 @@
 				</div>
 			</div>
 		</footer>
-
-		<script type="module" src="../js/modules/detail.js"></script>
 		<script type="module" src="../js/modules/app.js"></script>
 	</body>
 </html>

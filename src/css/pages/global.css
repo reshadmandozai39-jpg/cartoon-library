@@ -86,3 +86,199 @@ img {
 a {
 	-webkit-tap-highlight-color: transparent;
 }
+
+.page-main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 72px 24px 48px;
+}
+
+.page-hero {
+	margin-bottom: 28px;
+}
+
+.small-hero {
+	text-align: center;
+	padding: 16px 0 8px;
+}
+
+.page-hero .kicker {
+	color: var(--gold);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+
+.page-hero h1 {
+	font-size: clamp(2.1rem, 3vw, 3.5rem);
+	letter-spacing: -0.05em;
+	margin-bottom: 12px;
+}
+
+.page-hero p {
+	max-width: 700px;
+	margin: 0 auto;
+	color: var(--text-dim);
+	line-height: 1.7;
+}
+
+.page-content-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.catalog-results {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 18px 72px;
+}
+
+.catalog-section {
+	padding-top: 8px;
+}
+
+.catalog-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.catalog-grid .card {
+	min-width: 0;
+	flex: initial;
+}
+
+.info-card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	padding: 22px 20px;
+	box-shadow: var(--shadow);
+}
+
+.info-card h2 {
+	margin-bottom: 14px;
+	font-size: 1.2rem;
+}
+
+.card-label {
+	color: var(--gold);
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.info-card p {
+	color: var(--text-dim);
+	line-height: 1.7;
+}
+
+.info-card h2 + p {
+	color: var(--text);
+}
+
+.inline-link {
+	color: var(--teal);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.inline-link:hover {
+	color: var(--gold);
+}
+
+.info-card ul {
+	list-style: none;
+	display: grid;
+	gap: 10px;
+	color: var(--text-dim);
+}
+
+.info-card li::before {
+	content: '•';
+	color: var(--gold);
+	margin-right: 8px;
+}
+
+.text-only-grid,
+.price-grid,
+.contact-page-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.price-grid {
+	align-items: stretch;
+}
+
+.pricing-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.pricing-card.featured {
+	border-color: rgba(247, 184, 75, 0.5);
+	box-shadow: 0 20px 40px rgba(247, 184, 75, 0.15);
+}
+
+.price {
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--gold);
+	margin: 10px 0 18px;
+}
+
+.page-form {
+	display: grid;
+	gap: 14px;
+}
+
+.page-form label {
+	display: grid;
+	gap: 8px;
+	font-weight: 700;
+}
+
+.page-form input,
+.page-form textarea {
+	width: 100%;
+	border: 1px solid var(--border);
+	background: rgba(255, 255, 255, 0.02);
+	border-radius: 12px;
+	padding: 12px 14px;
+	color: var(--text);
+}
+
+.page-form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.contact-meta p {
+	margin: 10px 0;
+	color: var(--text-dim);
+}
+
+@media (max-width: 900px) {
+	.catalog-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.page-content-grid,
+	.text-only-grid,
+	.price-grid,
+	.contact-page-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.catalog-grid {
+		grid-template-columns: 1fr;
+	}
+}

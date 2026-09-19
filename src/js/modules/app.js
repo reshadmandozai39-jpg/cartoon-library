@@ -1,6 +1,14 @@
 import { CARTOONS, CATEGORIES } from '../data/data.js';
 
 function cardHTML(item) {
+	const isSubpage = window.location.pathname.includes('/src/pages/');
+	const imagePath = item.img.replace(
+		'./src/assets/img/',
+		isSubpage ? '../assets/img/' : './src/assets/img/',
+	);
+	const detailPath = isSubpage
+		? `detail.html?id=${item.id}`
+		: `./src/pages/detail.html?id=${item.id}`;
 	const rating = (4.2 + ((item.title.length * 17) % 7) / 10).toFixed(1);
 	const fans = Math.max(
 		1200,
@@ -9,9 +17,9 @@ function cardHTML(item) {
 	const formattedFans = `${(fans / 1000).toFixed(fans >= 10000 ? 0 : 1)}K`;
 
 	return `
-    <a class="card" href="./src/pages/detail.html?id=${item.id}">
+	    <a class="card" href="${detailPath}">
       <div class="card-thumb">
-        <img src="${item.img}" alt="${item.title}">
+				<img src="${imagePath}" alt="${item.title}">
         <span class="card-genre-badge">${item.genre || ''}</span>
       </div>
 
@@ -31,6 +39,10 @@ function cardHTML(item) {
 function renderAll() {
 	const main = document.getElementById('results');
 	if (!main) return;
+	if (main.classList.contains('catalog-results')) {
+		renderCatalogByCategory();
+		return;
+	}
 	main.innerHTML = '';
 	CATEGORIES.forEach((cat) => {
 		const items = CARTOONS.filter((c) => c.cat === cat.id);
@@ -53,14 +65,63 @@ function renderAll() {
 	});
 }
 
+function renderCatalogByCategory() {
+	const main = document.getElementById('results');
+	if (!main) return;
+	main.innerHTML = CATEGORIES.map((category) => {
+		const items = CARTOONS.filter((cartoon) => cartoon.cat === category.id);
+		if (!items.length) return '';
+		return `
+			<section class="category-section row-section catalog-section" id="${category.id}">
+				<div class="row-head">
+					<h2>${category.label}</h2>
+					<span class="subtitle">${items.length} Titel</span>
+				</div>
+				<div class="slider-container">
+					<button class="slide-btn prev-btn" onclick="scrollRow(this, -1)" aria-label="Vorherige Serien">❮</button>
+					<div class="row-scroll">${items.map(cardHTML).join('')}</div>
+					<button class="slide-btn next-btn" onclick="scrollRow(this, 1)" aria-label="Nächste Serien">❯</button>
+				</div>
+			</section>
+		`;
+	}).join('');
+}
+
+function renderCatalog(items, heading) {
+	const main = document.getElementById('results');
+	if (!main) return;
+	main.innerHTML = `
+		<section class="category-section row-section catalog-section">
+			<div class="row-head">
+				<h2>${heading}</h2>
+				<span class="subtitle">${items.length} Titel</span>
+			</div>
+			${
+				items.length
+					? `<div class="slider-container">
+						<button class="slide-btn prev-btn" onclick="scrollRow(this, -1)" aria-label="Vorherige Serien">❮</button>
+						<div class="row-scroll">${items.map(cardHTML).join('')}</div>
+						<button class="slide-btn next-btn" onclick="scrollRow(this, 1)" aria-label="Nächste Serien">❯</button>
+					</div>`
+					: '<p class="no-results">Keine Serien gefunden.</p>'
+			}
+		</section>
+	`;
+}
+
 function renderSearch(query) {
 	const main = document.getElementById('results');
 	if (!main) return;
 	const q = query.trim().toLowerCase();
 	const matches = CARTOONS.filter(
 		(c) =>
-			c.title.toLowerCase().includes(q) || c.short.toLowerCase().includes(q),
+			c.title.toLowerCase().includes(q) ||
+			(c.search && c.search.toLowerCase().includes(q)),
 	);
+	if (main.classList.contains('catalog-results')) {
+		renderCatalog(matches, `Suchergebnisse für "${query}"`);
+		return;
+	}
 	main.innerHTML = `
     <section class="category-section row-section">
       <div class="row-head">
@@ -99,7 +160,8 @@ window.scrollRow = scrollRow;
 
 document.addEventListener('DOMContentLoaded', () => {
 	const burgerBtn = document.getElementById('burgerBtn');
-	const mainNav = document.getElementById('mainNav');
+	const mainNav =
+		document.getElementById('mainNav') || document.querySelector('.main-nav');
 	const themeToggle = document.getElementById('themeToggle');
 	const themeIcon = themeToggle
 		? themeToggle.querySelector('.theme-icon')
@@ -108,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const applyTheme = (theme) => {
 		document.body.setAttribute('data-theme', theme);
 		if (themeIcon) {
-			themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+			themeIcon.textContent = theme === 'light' ? 'Dark' : 'Light';
 		}
 		localStorage.setItem('cartoon-theme', theme);
 	};
@@ -130,7 +192,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (burgerBtn && mainNav) {
 		burgerBtn.addEventListener('click', () => {
-			mainNav.classList.toggle('active');
+			const isOpen = mainNav.classList.toggle('active');
+			burgerBtn.setAttribute('aria-expanded', String(isOpen));
+		});
+	}
+
+	if (mainNav) {
+		mainNav.querySelectorAll('.nav-link').forEach((link) => {
+			link.addEventListener('click', () => {
+				if (window.innerWidth <= 900 && burgerBtn) {
+					mainNav.classList.remove('active');
+					burgerBtn.setAttribute('aria-expanded', 'false');
+				}
+			});
 		});
 	}
 

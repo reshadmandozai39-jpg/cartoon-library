@@ -58,9 +58,22 @@
 .main-nav {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	gap: 8px;
 	flex: 1;
+}
+
+.home-page .main-nav > .nav-item:not(.mega-item),
+.home-page .main-nav > .header-actions .search-box {
+	display: none;
+}
+
+.home-page .mega-item .dropdown-wrapper {
+	display: none;
+}
+
+.home-page .mega-item .arrow {
+	display: none;
 }
 
 .header-actions {

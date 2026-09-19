@@ -32,7 +32,10 @@ if (cartoon) {
 		imgEl.alt = cartoon.title;
 	}
 
-	document.getElementById('detailDescription').innerText = cartoon.short;
+	const description =
+		cartoon.description ||
+		`${cartoon.short} Diese ${cartoon.genre.toLowerCase()}-Serie verbindet starke Figuren mit einer eigenen Welt und vielen besonderen Momenten.`;
+	document.getElementById('detailDescription').innerText = description;
 	document.getElementById('detailGenre').innerText = cartoon.genre;
 	document.getElementById('detailRating').innerText = `⭐ ${rating}/5`;
 	document.getElementById('detailFans').innerText = `${formattedFans} Fans`;

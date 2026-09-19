@@ -163,7 +163,7 @@ main {
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
-	padding: 0 34px;
+	padding: 0 28px;
 }
 
 .row-scroll {
@@ -324,11 +324,11 @@ main {
 }
 
 .prev-btn {
-	left: 18px;
+	left: -18px;
 }
 
 .next-btn {
-	right: 18px;
+	right: -18px;
 }
 
 .no-results {
@@ -350,12 +350,12 @@ main {
 		top: 100%;
 		left: 0;
 		width: 100%;
-		background: rgba(15, 23, 42, 0.98);
+		background: var(--header-bg);
 		backdrop-filter: blur(16px);
 		flex-direction: column;
 		padding: 20px;
 		border-bottom: 1px solid var(--border);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+		box-shadow: var(--shadow);
 	}
 
 	.main-nav.active {
@@ -390,6 +390,10 @@ main {
 	.search-box input {
 		width: 140px;
 	}
+
+	.card {
+		flex-basis: calc((100% - 54px) / 4);
+	}
 }
 
 @media (max-width: 768px) {
@@ -400,6 +404,18 @@ main {
 
 	.hero h1 {
 		font-size: 2.3rem;
+	}
+
+	.slider-container {
+		padding: 0 32px;
+	}
+
+	.next-btn {
+		right: 4px;
+	}
+
+	.prev-btn {
+		left: 4px;
 	}
 
 	.search-box input {

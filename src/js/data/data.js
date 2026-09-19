@@ -7,6 +7,8 @@ const CARTOONS = [
 		img: './src/assets/img/tom.png',
 		short:
 			'Die ewige Jagd zwischen Kater Tom und Maus Jerry – slapstickreich und dialogfrei.',
+		description:
+			'Tom und Jerry liefern sich in jeder Folge neue, kreative Verfolgungsjagden. Der zeitlose Slapstick lebt von perfektem Timing, klarer Bildsprache und einer Freundschaft, die unter all dem Chaos immer wieder sichtbar wird.',
 		genre: 'Slapstick-Komödie',
 	},
 	{
@@ -124,6 +126,8 @@ const CARTOONS = [
 		color: '#1DAA5C',
 		img: './src/assets/img/thom9.jpg',
 		short: 'Ein Junge verwandelt sich in verschiedene Aliens.',
+		description:
+			'Ben entdeckt die Omnitrix und erhält die Fähigkeit, sich in aussergewöhnliche Aliens zu verwandeln. Zwischen Action, Humor und grossen Entscheidungen lernt er, was echte Verantwortung bedeutet.',
 		genre: 'Sci-Fi-Action',
 	},
 	{
@@ -142,6 +146,9 @@ const CARTOONS = [
 		color: '#F2C230',
 		img: './src/assets/img/pikachu.jpg',
 		short: 'Ash und Pikachu reisen durch die Pokémon-Welt.',
+		description:
+			'Ash und Pikachu reisen durch verschiedene Regionen, lernen neue Freunde kennen und stellen sich spannenden Arenakämpfen. Im Mittelpunkt stehen Mut, Teamwork und die Freude daran, gemeinsam über sich hinauszuwachsen.',
+		search: 'Pikachu',
 		genre: 'Abenteuer-Anime',
 	},
 	{
@@ -160,6 +167,8 @@ const CARTOONS = [
 		color: '#4FAE9A',
 		img: './src/assets/img/thom6.jpg',
 		short: 'Aang muss die vier Elemente meistern.',
+		description:
+			'Aang ist der letzte Luftnomade und trägt als Avatar die Verantwortung für das Gleichgewicht der Welt. Gemeinsam mit seinen Freunden lernt er die Elemente und wächst dabei an jeder Entscheidung.',
 		genre: 'Fantasy-Abenteuer',
 	},
 	{
@@ -507,7 +516,7 @@ const CARTOONS = [
 ];
 
 const CATEGORIES = [
-	{ id: 'klassiker', label: 'Klassiker' },
+	{ id: 'klassiker', label: 'Serien' },
 	{ id: 'cartoonnetwork', label: 'Cartoon Network' },
 	{ id: 'anime', label: 'Anime & Pokémon' },
 	{ id: 'action', label: 'Action & Abenteuer' },
