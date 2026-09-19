@@ -89,6 +89,33 @@ window.scrollRow = scrollRow;
 document.addEventListener('DOMContentLoaded', () => {
 	const burgerBtn = document.getElementById('burgerBtn');
 	const mainNav = document.getElementById('mainNav');
+	const themeToggle = document.getElementById('themeToggle');
+	const themeIcon = themeToggle
+		? themeToggle.querySelector('.theme-icon')
+		: null;
+
+	const applyTheme = (theme) => {
+		document.body.setAttribute('data-theme', theme);
+		if (themeIcon) {
+			themeIcon.textContent = theme === 'light' ? 'Dark' : 'Lgiht';
+		}
+		localStorage.setItem('cartoon-theme', theme);
+	};
+
+	const savedTheme = localStorage.getItem('cartoon-theme');
+	if (savedTheme === 'light') {
+		applyTheme('light');
+	} else {
+		applyTheme('dark');
+	}
+
+	if (themeToggle) {
+		themeToggle.addEventListener('click', () => {
+			const nextTheme =
+				document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+			applyTheme(nextTheme);
+		});
+	}
 
 	if (burgerBtn && mainNav) {
 		burgerBtn.addEventListener('click', () => {
