@@ -3,237 +3,765 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CartoonHub Alle Cartoons an einem Ort</title>
+		<title>CartoonHub – Alle Cartoons an einem Ort</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="stylesheet" href="styles.css" />
-   <header class="site-header">
-  <div class="nav-container">
-    <a href="#" class="brand">Cartoon<span>Hub</span></a>
-    <nav class="main-nav">
-          <div class="nav-item mega-item">
-        <a href="#klassiker" class="nav-link active">Klassiker <span class="arrow">▾</span></a>
-                <div class="dropdown-wrapper mega-wrapper">
-          <div class="mega-menu">
-            <div class="menu-column">
-              <h4>Golden Era</h4>
-              <a href="#looney-tunes">Looney Tunes</a>
-              <a href="#tom-jerry">Tom &amp; Jerry</a>
-              <a href="#feuerstein">Familie Feuerstein</a>
-              <a href="#panther">Rosaroter Panther</a>
-              <a href="#popeye">Popeye</a>
-            </div>
-            <div class="menu-column">
-              <h4>80er &amp; 90er Kult</h4>
-              <a href="#scooby-doo">Scooby-Doo</a>
-              <a href="#ducktales">DuckTales</a>
-              <a href="#tmnt">TMNT Turtles</a>
-              <a href="#gummibaeren">Gummibärenbande</a>
-              <a href="#gadget">Inspector Gadget</a>
-            </div>
-            <div class="menu-column">
-              <h4>Beliebte Genres</h4>
-              <a href="#slapstick">Slapstick &amp; Comedy</a>
-              <a href="#abenteuer">Abenteuer</a>
-              <a href="#zeichentrick">Zeichen-Klassiker</a>
-            </div>
-            <div class="menu-column highlight-column">
-              <div class="tipp-card">
-                <span class="badge">🏆 TIPP DER WOCHE</span>
-                <h5>LOONEY TUNES</h5>
-                <p>Bugs Bunny &amp; Co. entdecken.</p>
-                <a href="#looney-tunes" class="card-btn">Ansehen &rarr;</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="#cartoonnetwork" class="nav-link">Cartoon Network <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#ben10">Ben 10</a>
-            <a href="#adventure-time">Adventure Time</a>
-            <a href="#powerpuff">Powerpuff Girls</a>
-            <a href="#dexter">Dexters Labor</a>
-            <a href="#gumball">Gumball</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="nav-item">
-        <a href="#anime" class="nav-link">Anime &amp; Pokémon <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#pokemon">Pokémon</a>
-            <a href="#dragonball">Dragon Ball Z</a>
-            <a href="#naruto">Naruto</a>
-            <a href="#one-piece">One Piece</a>
-            <a href="#yugioh">Yu-Gi-Oh!</a>
-          </div>
-        </div>
-      </div>
+		<link rel="stylesheet" href="./src/css/pages/styles.css" />
+	</head>
+	<body class="home-page">
+		<header class="site-header">
+			<div class="nav-container">
+				<a href="index.html" class="brand">Cartoon<span>Hub</span></a>
 
-      <div class="nav-item">
-        <a href="#action" class="nav-link">Action &amp; Abenteuer <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#avatar">Avatar</a>
-            <a href="#clone-wars">Star Wars: Clone Wars</a>
-            <a href="#kim-possible">Kim Possible</a>
-            <a href="#ninjago">Ninjago</a>
-          </div>
-        </div>
-      </div>
+				<button
+					class="burger"
+					id="burgerBtn"
+					aria-label="Menü öffnen"
+					aria-expanded="false"
+					type="button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="main-nav" id="mainNav">
+					<a href="index.html" class="nav-link active">Home</a>
+					<div class="nav-item mega-item">
+						<a href="src/pages/serien.html" class="nav-link"
+							>Serien <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper mega-wrapper">
+							<div class="mega-menu">
+								<div class="menu-column">
+									<h4>Golden Era</h4>
+									<a href="#looney-tunes">Looney Tunes</a>
+									<a href="#tom-jerry">Tom &amp; Jerry</a>
+									<a href="#feuerstein">Familie Feuerstein</a>
+									<a href="#panther">Rosaroter Panther</a>
+									<a href="#popeye">Popeye</a>
+								</div>
+								<div class="menu-column">
+									<h4>80er &amp; 90er Kult</h4>
+									<a href="#scooby-doo">Scooby-Doo</a>
+									<a href="#ducktales">DuckTales</a>
+									<a href="#tmnt">TMNT Turtles</a>
+									<a href="#gummibaeren">Gummibärenbande</a>
+									<a href="#gadget">Inspector Gadget</a>
+								</div>
+								<div class="menu-column">
+									<h4>Beliebte Genres</h4>
+									<a href="#slapstick">Slapstick &amp; Comedy</a>
+									<a href="#abenteuer">Abenteuer</a>
+									<a href="#zeichentrick">Zeichen-Klassiker</a>
+								</div>
+								<div class="menu-column highlight-column">
+									<div class="tipp-card">
+										<span class="badge">🏆 TIPP DER WOCHE</span>
+										<h5>LOONEY TUNES</h5>
+										<p>Bugs Bunny &amp; Co. entdecken.</p>
+										<a href="#looney-tunes" class="card-btn">Ansehen &rarr;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="src/pages/preise.html" class="nav-link">Preise</a>
+					<a href="src/pages/kontakt.html" class="nav-link">Kontakt</a>
+					<a href="src/pages/impressum.html" class="nav-link">Impressum</a>
 
-      <div class="nav-item">
-        <a href="#retro" class="nav-link">Retro Cartoons <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#he-man">He-Man</a>
-            <a href="#thundercats">ThunderCats</a>
-            <a href="#captain-future">Captain Future</a>
-            <a href="#jetsons">Die Jetsons</a>
-          </div>
-        </div>
-      </div>
+					<div class="nav-item">
+						<a href="#cartoonnetwork" class="nav-link"
+							>Cartoon Network <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#ben10">Ben 10</a>
+								<a href="#adventure-time">Adventure Time</a>
+								<a href="#powerpuff">Powerpuff Girls</a>
+								<a href="#dexter">Dexters Labor</a>
+								<a href="#gumball">Gumball</a>
+							</div>
+						</div>
+					</div>
 
-      <div class="nav-item">
-        <a href="#familie" class="nav-link">Familienserien <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#simpsons">Die Simpsons</a>
-            <a href="#spongebob">SpongeBob</a>
-            <a href="#phineas-ferb">Phineas und Ferb</a>
-            <a href="#gravity-falls">Gravity Falls</a>
-          </div>
-        </div>
-      </div>
+					<div class="nav-item">
+						<a href="#anime" class="nav-link"
+							>Anime &amp; Pokémon <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#pokemon">Pokémon</a>
+								<a href="#dragonball">Dragon Ball Z</a>
+								<a href="#naruto">Naruto</a>
+								<a href="#one-piece">One Piece</a>
+								<a href="#yugioh">Yu-Gi-Oh!</a>
+							</div>
+						</div>
+					</div>
 
-      <div class="nav-item">
-        <a href="#superhelden" class="nav-link">Superhelden <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#batman">Batman: Animated Series</a>
-            <a href="#spiderman">Spider-Man (90s)</a>
-            <a href="#x-men">X-Men</a>
-            <a href="#teen-titans">Teen Titans</a>
-          </div>
-        </div>
-      </div>
+					<div class="nav-item">
+						<a href="#action" class="nav-link"
+							>Action &amp; Abenteuer <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#avatar">Avatar</a>
+								<a href="#clone-wars">Star Wars: Clone Wars</a>
+								<a href="#kim-possible">Kim Possible</a>
+								<a href="#ninjago">Ninjago</a>
+							</div>
+						</div>
+					</div>
 
-      <div class="nav-item">
-        <a href="#fantasy" class="nav-link">Fantasy &amp; Sci-Fi <span class="arrow">▾</span></a>
-        <div class="dropdown-wrapper">
-          <div class="dropdown-menu">
-            <a href="#futurama">Futurama</a>
-            <a href="#rick-morty">Rick and Morty</a>
-            <a href="#owl-house">Willkommen im Haus der Eulen</a>
-            <a href="#danny-phantom">Danny Phantom</a>
-          </div>
-        </div>
-      </div>
+					<div class="nav-item">
+						<a href="#retro" class="nav-link"
+							>Retro Cartoons <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#he-man">He-Man</a>
+								<a href="#thundercats">ThunderCats</a>
+								<a href="#captain-future">Captain Future</a>
+								<a href="#jetsons">Die Jetsons</a>
+							</div>
+						</div>
+					</div>
 
-    </nav>
+					<div class="nav-item">
+						<a href="#familie" class="nav-link"
+							>Familienserien <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#simpsons">Die Simpsons</a>
+								<a href="#spongebob">SpongeBob</a>
+								<a href="#phineas-ferb">Phineas und Ferb</a>
+								<a href="#gravity-falls">Gravity Falls</a>
+							</div>
+						</div>
+					</div>
 
-    <div class="search-box">
-      <span class="search-icon"></span>
-      <input type="text" id="searchInput" placeholder="Cartoon suchen..." autocomplete="off">
-    </div>
-  </div>
-</header>
-</header>
+					<div class="nav-item">
+						<a href="#superhelden" class="nav-link"
+							>Superhelden <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#batman">Batman: Animated Series</a>
+								<a href="#spiderman">Spider-Man (90s)</a>
+								<a href="#x-men">X-Men</a>
+								<a href="#teen-titans">Teen Titans</a>
+							</div>
+						</div>
+					</div>
 
-		<section class="hero">
+					<div class="nav-item">
+						<a href="#fantasy" class="nav-link"
+							>Fantasy &amp; Sci-Fi <span class="arrow">▾</span></a
+						>
+						<div class="dropdown-wrapper">
+							<div class="dropdown-menu">
+								<a href="#futurama">Futurama</a>
+								<a href="#rick-morty">Rick and Morty</a>
+								<a href="#owl-house">Willkommen im Haus der Eulen</a>
+								<a href="#danny-phantom">Danny Phantom</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="header-actions">
+						<div class="search-box">
+							<span class="search-icon">🔍</span>
+							<input
+								type="text"
+								id="searchInput"
+								placeholder="Cartoon suchen..."
+								autocomplete="off" />
+						</div>
+						<button
+							class="theme-toggle"
+							id="themeToggle"
+							type="button"
+							aria-label="Farbschema wechseln">
+							<span class="theme-icon">Light</span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<section class="hero home-hero">
 			<div class="hero-text">
 				<div class="eyebrow-strip"><span></span><span></span><span></span></div>
-				<h1>Jede Ära des Cartoons, an einem Ort.</h1>
+				<p class="kicker">CartoonHub entdecken</p>
+				<h1>Deine Welt voller Cartoons!</h1>
 				<p>
-					Von Looney Tunes über Cartoon Network bis Pokémon und Anime entdecke
-					Kurzbeschreibungen, Fakten und Empfehlungen zu über 30
-					Zeichentrickserien und filmen.
+					Entdecke ikonische Serien, neue Lieblingsfiguren und Geschichten für
+					jede Generation – übersichtlich, liebevoll und direkt zum Entdecken.
 				</p>
 				<div class="hero-actions">
-					<button
-						class="btn btn-primary"
-						onclick="document.getElementById('klassiker').scrollIntoView()">
-						Serien entdecken
-					</button>
-					<button
-						class="btn btn-outline"
-						onclick="document.getElementById('searchInput').focus()">
-						Suchen
-					</button>
+					<a class="btn btn-primary" href="src/pages/serien.html"
+						>Jetzt entdecken</a
+					>
+					<a class="btn btn-outline" href="#highlights">Highlights ansehen</a>
 				</div>
 			</div>
 			<div class="hero-visual">
-                <img src="src/pokemon/pikachu.jpg" alt="Pikachu" class="hero-img">
+				<img
+					src="./src/assets/img/pikachu.jpg"
+					alt="Pikachu aus Pokémon"
+					class="hero-img" />
 				<div class="big-title">Pika Pika!<br />Pokémon im Fokus</div>
 			</div>
 		</section>
 
-		<main id="results"></main>
-<footer class="site-footer">
-  <div class="footer-container">
-    
-    <div class="footer-col brand-col">
-      <a href="#" class="footer-brand">Cartoon<span>Hub</span></a>
-      <p class="brand-desc">
-        Deine ultimative Fan-Übersicht für Nostalgie, Kult-Cartoons und aktuelle Zeichentrickserien aus mehreren Jahrzehnten.
-      </p>
-      <div class="fan-badge">
-        <span> Non-Profit Fanprojekt</span>
-      </div>
-    </div>
+		<section class="home-intro">
+			<div class="intro-mark">CH</div>
+			<div>
+				<p class="kicker">Was dich erwartet</p>
+				<h2>Eine liebevolle Übersicht für grosse und kleine Cartoon-Fans.</h2>
+				<p>
+					CartoonHub sammelt Nostalgie, Abenteuer und moderne Animation an einem
+					Ort. Finde Serien nach Genre, entdecke neue Favoriten und öffne jede
+					Karte für mehr Details.
+				</p>
+			</div>
+		</section>
 
-    <div class="footer-col">
-      <h4>Kategorien</h4>
-      <ul class="footer-links">
-        <li><a href="#klassiker">Klassiker (50er-90er)</a></li>
-        <li><a href="#cartoonnetwork">Cartoon Network</a></li>
-        <li><a href="#anime">Anime &amp; Pokémon</a></li>
-        <li><a href="#action">Action &amp; Abenteuer</a></li>
-        <li><a href="#superhelden">Superhelden Cartoons</a></li>
-      </ul>
-    </div>
+		<section class="landing-section highlights-section" id="highlights">
+			<div class="section-intro">
+				<p class="kicker">Top-Auswahl</p>
+				<h2>Vier Serien, die heute im Mittelpunkt stehen.</h2>
+			</div>
+			<div class="highlight-grid">
+				<a class="card highlight-card" href="src/pages/detail.html?id=tomjerry">
+					<div class="card-thumb">
+						<img src="./src/assets/img/tom.png" alt="Tom und Jerry" />
+					</div>
+					<div class="card-body">
+						<span class="card-genre-badge">Klassiker</span>
+						<h3 class="card-title">Tom und Jerry</h3>
+						<p class="card-desc">
+							Die ewige Jagd voller Slapstick und überraschender Wendungen.
+						</p>
+						<span class="card-tag"
+							>Mehr erfahren <span aria-hidden="true">→</span></span
+						>
+					</div>
+				</a>
+				<a class="card highlight-card" href="src/pages/detail.html?id=pokemon">
+					<div class="card-thumb">
+						<img src="./src/assets/img/pikachu.jpg" alt="Pokémon mit Pikachu" />
+					</div>
+					<div class="card-body">
+						<span class="card-genre-badge">Anime</span>
+						<h3 class="card-title">Pokémon</h3>
+						<p class="card-desc">
+							Ash und Pikachu reisen durch eine Welt voller Abenteuer.
+						</p>
+						<span class="card-tag"
+							>Mehr erfahren <span aria-hidden="true">→</span></span
+						>
+					</div>
+				</a>
+				<a class="card highlight-card" href="src/pages/detail.html?id=avatar">
+					<div class="card-thumb">
+						<img
+							src="./src/assets/img/thom6.jpg"
+							alt="Avatar: Der Herr der Elemente" />
+					</div>
+					<div class="card-body">
+						<span class="card-genre-badge">Fantasy</span>
+						<h3 class="card-title">Avatar</h3>
+						<p class="card-desc">
+							Aang muss die vier Elemente meistern und die Welt retten.
+						</p>
+						<span class="card-tag"
+							>Mehr erfahren <span aria-hidden="true">→</span></span
+						>
+					</div>
+				</a>
+				<a class="card highlight-card" href="src/pages/detail.html?id=ben10">
+					<div class="card-thumb">
+						<img src="./src/assets/img/thom9.jpg" alt="Ben 10" />
+					</div>
+					<div class="card-body">
+						<span class="card-genre-badge">Action</span>
+						<h3 class="card-title">Ben 10</h3>
+						<p class="card-desc">
+							Ein Junge verwandelt sich in verschiedene Aliens.
+						</p>
+						<span class="card-tag"
+							>Mehr erfahren <span aria-hidden="true">→</span></span
+						>
+					</div>
+				</a>
+			</div>
+		</section>
 
-    <div class="footer-col">
-      <h4>Informationen</h4>
-      <ul class="footer-links">
-        <li><a href="#ueber-uns">Über das Projekt</a></li>
-        <li><a href="#kontakt">Kontakt &amp; Feedback</a></li>
-        <li><a href="#impressum">Impressum</a></li>
-        <li><a href="#datenschutz">Datenschutz</a></li>
-      </ul>
-    </div>
+		<section class="benefits-section">
+			<div class="section-intro">
+				<p class="kicker">Warum CartoonHub</p>
+				<h2>Mehr entdecken. Einfacher finden.</h2>
+			</div>
+			<div class="benefit-grid">
+				<div class="benefit-item">
+					<span class="benefit-icon">✦</span>
+					<div>
+						<h3>Riesige Auswahl</h3>
+						<p>Von Klassikern bis Anime warten viele Welten auf dich.</p>
+					</div>
+				</div>
+				<div class="benefit-item">
+					<span class="benefit-icon">◉</span>
+					<div>
+						<h3>Überall verfügbar</h3>
+						<p>Die Übersicht funktioniert auf Handy, Tablet und Desktop.</p>
+					</div>
+				</div>
+				<div class="benefit-item">
+					<span class="benefit-icon">♡</span>
+					<div>
+						<h3>Für die Familie</h3>
+						<p>Klare Kategorien helfen jedem, schnell etwas zu finden.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <div class="footer-col community-col">
-      <h4>Community &amp; Folgen</h4>
-      <p class="sub-text">Tritt unserer Cartoon-Community bei:</p>
-      
-      <div class="social-badges">
-        <a href="#discord" class="social-btn discord">
-          <span class="icon"></span> Discord
-        </a>
-        <a href="#youtube" class="social-btn youtube">
-          <span class="icon"></span> YouTube
-        </a>
-        <a href="#instagram" class="social-btn instagram">
-          <span class="icon"></span> Instagram
-        </a>
-      </div>
-    </div>
+		<section class="landing-section gallery-section">
+			<div class="section-intro">
+				<p class="kicker">Galerie</p>
+				<h2>Ein paar Lieblingsmomente.</h2>
+			</div>
+			<div class="gallery-grid">
+				<img src="./src/assets/img/thom3.jpg" alt="Cartoon-Galerie Motiv 1" />
+				<img src="./src/assets/img/thom4.jpg" alt="Cartoon-Galerie Motiv 2" />
+				<img src="./src/assets/img/thom7.jpg" alt="Cartoon-Galerie Motiv 3" />
+				<img src="./src/assets/img/thom8.jpg" alt="Cartoon-Galerie Motiv 4" />
+			</div>
+		</section>
 
-  </div>
+		<section class="home-cta">
+			<div>
+				<p class="kicker">Bereit für die nächste Folge?</p>
+				<h2>Finde deine neue Lieblingsserie.</h2>
+			</div>
+			<a class="btn btn-primary" href="src/pages/preise.html">Preise ansehen</a>
+		</section>
 
-  <div class="footer-bottom">
-    <div class="bottom-container">
-      <p>&copy; 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei den jeweiligen Studios.</p>
-      <p class="disclaimer">Inoffizielle Fanseite &bull; Nicht kommerziell</p>
-    </div>
-  </div>
-</footer>
+		<section class="landing-section landing-table">
+			<div class="section-intro">
+				<p class="kicker">Preise</p>
+				<h2>Transparente Pakete für Cartoon-Design und Inhalte</h2>
+			</div>
+			<table class="pricing-table">
+				<thead>
+					<tr>
+						<th>Leistung</th>
+						<th>Beschreibung</th>
+						<th>Preis</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Mini-Portrait</td>
+						<td>Cartoon-Portrait, Kopf &amp; Schultern</td>
+						<td>CHF 29.-</td>
+					</tr>
+					<tr>
+						<td>Ganzkörper-Cartoon</td>
+						<td>Farbige Illustration, ganzer Körper</td>
+						<td>CHF 59.-</td>
+					</tr>
+					<tr>
+						<td>Logo-Design</td>
+						<td>Individuelles Cartoon-Logo für Firmen</td>
+						<td>CHF 149.-</td>
+					</tr>
+					<tr>
+						<td>Poster A3</td>
+						<td>Grossformat-Print inkl. Rahmen</td>
+						<td>CHF 89.-</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 
-		<script src="data.js"></script>
-		<script src="app.js"></script>
+		<section class="landing-section contact-preview">
+			<div class="section-intro">
+				<p class="kicker">Kontakt</p>
+				<h2>Fragen zu Serien, Ideen oder Designprojekten?</h2>
+			</div>
+			<div class="contact-box">
+				<form id="kontaktform" class="kontakt-form">
+					<label>
+						Name*
+						<input
+							type="text"
+							name="name"
+							required
+							minlength="2"
+							placeholder="Dein Name" />
+					</label>
+					<label>
+						E-Mail*
+						<input
+							type="email"
+							name="email"
+							required
+							placeholder="deine@email.ch" />
+					</label>
+					<label>
+						Nachricht*
+						<textarea
+							name="nachricht"
+							required
+							minlength="10"
+							placeholder="Deine Nachricht..."></textarea>
+					</label>
+					<button type="submit" class="btn btn-primary">
+						Nachricht senden
+					</button>
+				</form>
+			</div>
+		</section>
+
+		<style>
+			.home-hero {
+				padding-top: 56px;
+			}
+			.home-hero .kicker {
+				margin-bottom: 12px;
+			}
+			.home-intro {
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 28px 24px 54px;
+				display: grid;
+				grid-template-columns: 64px minmax(0, 720px);
+				gap: 24px;
+				align-items: start;
+			}
+			.intro-mark {
+				width: 56px;
+				height: 56px;
+				display: grid;
+				place-items: center;
+				border-radius: 16px;
+				background: var(--gold);
+				color: #20170b;
+				font-weight: 900;
+				letter-spacing: -0.08em;
+			}
+			.home-intro h2,
+			.benefits-section h2 {
+				max-width: 760px;
+				font-size: clamp(1.7rem, 3vw, 2.7rem);
+				letter-spacing: -0.05em;
+				margin-bottom: 12px;
+			}
+			.home-intro p:not(.kicker) {
+				max-width: 680px;
+				color: var(--text-dim);
+				line-height: 1.75;
+			}
+			.highlights-section {
+				padding-top: 18px;
+			}
+			.highlight-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 18px;
+			}
+			.highlight-card .card-body {
+				position: relative;
+			}
+			.highlight-card .card-body > .card-genre-badge {
+				position: static;
+				display: inline-block;
+				margin-bottom: 12px;
+			}
+			.benefits-section {
+				max-width: 1120px;
+				margin: 0 auto;
+				padding: 58px 24px 42px;
+			}
+			.benefit-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 18px;
+			}
+			.benefit-item {
+				display: flex;
+				gap: 14px;
+				padding: 20px;
+				border: 1px solid var(--border);
+				border-radius: 16px;
+				background: var(--surface);
+			}
+			.benefit-icon {
+				flex: 0 0 36px;
+				height: 36px;
+				display: grid;
+				place-items: center;
+				border-radius: 50%;
+				background: rgba(247, 184, 75, 0.18);
+				color: var(--gold);
+				font-size: 1.25rem;
+			}
+			.benefit-item h3 {
+				font-size: 1rem;
+				margin-bottom: 6px;
+			}
+			.benefit-item p {
+				color: var(--text-dim);
+				font-size: 0.86rem;
+				line-height: 1.55;
+			}
+			.gallery-section {
+				padding-top: 34px;
+			}
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: 1.4fr 1fr 1fr;
+				grid-template-rows: 150px 150px;
+				gap: 12px;
+			}
+			.gallery-grid img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 14px;
+				border: 1px solid var(--border);
+			}
+			.gallery-grid img:first-child {
+				grid-row: 1 / -1;
+			}
+			.home-cta {
+				max-width: 1120px;
+				margin: 26px auto 42px;
+				padding: 28px 30px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+				border: 1px solid rgba(247, 184, 75, 0.35);
+				border-radius: 18px;
+				background: linear-gradient(
+					110deg,
+					rgba(247, 184, 75, 0.16),
+					var(--surface)
+				);
+			}
+			.home-cta h2 {
+				font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+				letter-spacing: -0.04em;
+			}
+			.home-cta .kicker {
+				margin-bottom: 8px;
+			}
+			@media (max-width: 980px) {
+				.highlight-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+			@media (max-width: 700px) {
+				.home-intro {
+					grid-template-columns: 1fr;
+				}
+				.benefit-grid {
+					grid-template-columns: 1fr;
+				}
+				.gallery-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					grid-template-rows: repeat(2, 130px);
+				}
+				.gallery-grid img:first-child {
+					grid-row: auto;
+				}
+				.home-cta {
+					margin-inline: 16px;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+			@media (max-width: 480px) {
+				.highlight-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.landing-section {
+				max-width: 1280px;
+				margin: 0 auto;
+				padding: 30px 24px 20px;
+			}
+			.section-intro {
+				margin-bottom: 22px;
+			}
+			.kicker {
+				color: var(--gold);
+				font-size: 0.8rem;
+				font-weight: 800;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+			}
+			.section-intro h2 {
+				font-size: clamp(1.7rem, 2.5vw, 2.6rem);
+				letter-spacing: -0.05em;
+			}
+			.feature-grid {
+				display: grid;
+				gap: 18px;
+			}
+			.three-col {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+			.feature-card {
+				padding: 22px 20px;
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 18px;
+				box-shadow: var(--shadow);
+			}
+			.feature-card h3 {
+				margin-bottom: 10px;
+				font-size: 1.2rem;
+			}
+			.feature-card p {
+				color: var(--text-dim);
+				line-height: 1.7;
+			}
+			.landing-table {
+				padding-top: 40px;
+			}
+			.pricing-table {
+				width: 100%;
+				max-width: 960px;
+				border-collapse: collapse;
+				margin: 0 auto;
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 18px;
+				overflow: hidden;
+			}
+			.pricing-table th,
+			.pricing-table td {
+				padding: 16px 18px;
+				border-bottom: 1px solid var(--border);
+				text-align: left;
+			}
+			.pricing-table th {
+				background: rgba(247, 184, 75, 0.12);
+				color: var(--gold);
+				font-size: 0.8rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+			.pricing-table tr:nth-child(even) {
+				background: rgba(255, 255, 255, 0.02);
+			}
+			.contact-box {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 24px;
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 18px;
+				box-shadow: var(--shadow);
+			}
+			.kontakt-form {
+				display: grid;
+				gap: 16px;
+			}
+			.kontakt-form label {
+				display: block;
+				font-weight: 700;
+				color: var(--text);
+			}
+			.kontakt-form input,
+			.kontakt-form textarea {
+				width: 100%;
+				margin-top: 8px;
+				padding: 12px 14px;
+				border-radius: 12px;
+				border: 1px solid var(--border);
+				background: rgba(255, 255, 255, 0.03);
+				color: var(--text);
+			}
+			.kontakt-form textarea {
+				min-height: 120px;
+				resize: vertical;
+			}
+			@media (max-width: 900px) {
+				.three-col {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const form = document.getElementById('kontaktform');
+				if (form) {
+					form.addEventListener('submit', (e) => {
+						e.preventDefault();
+						if (form.checkValidity()) {
+							alert('Danke für deine Nachricht! Wir melden uns bald.');
+							form.reset();
+						}
+					});
+				}
+			});
+		</script>
+
+		<!-- FOOTER -->
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-col brand-col">
+					<a href="index.html" class="footer-brand">Cartoon<span>Hub</span></a>
+					<p class="brand-desc">
+						Deine ultimative Fan-Übersicht für Nostalgie, Kult-Cartoons und
+						aktuelle Zeichentrickserien aus mehreren Jahrzehnten.
+					</p>
+					<div class="fan-badge">
+						<span>Non-Profit Fanprojekt</span>
+					</div>
+				</div>
+
+				<div class="footer-col">
+					<h4>Navigation</h4>
+					<ul class="footer-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="src/pages/serien.html">Serien</a></li>
+						<li><a href="src/pages/preise.html">Preise</a></li>
+						<li><a href="src/pages/kontakt.html">Kontakt</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-col">
+					<h4>Informationen</h4>
+					<ul class="footer-links">
+						<li><a href="src/pages/ueber-uns.html">Über uns</a></li>
+						<li><a href="src/pages/impressum.html">Impressum</a></li>
+						<li><a href="src/pages/serien.html">Katalog</a></li>
+						<li><a href="src/pages/kontakt.html">Feedback</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="bottom-container">
+					<p>
+						&copy; 2026 CartoonHub. Alle Serien- und Filmrechte liegen bei den
+						jeweiligen Studios.
+					</p>
+					<p class="disclaimer">
+						Inoffizielle Fanseite &bull; Nicht kommerziell
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="./src/js/modules/app.js"></script>
 	</body>
 </html>
