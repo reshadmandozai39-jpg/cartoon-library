@@ -39,7 +39,7 @@ body[data-theme='light'] {
 		rgba(255, 255, 255, 0.96),
 		rgba(226, 232, 240, 0.96)
 	);
-	--footer-bottom-bg: rgba(15, 23, 42, 0.98);
+	--footer-bottom-bg: #e2e8f0;
 	--shadow: 0 20px 30px rgba(15, 23, 42, 0.08);
 }
 

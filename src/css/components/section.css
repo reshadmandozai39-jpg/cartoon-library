@@ -1,27 +1,41 @@
 .intro {
-	max-width: 700px;
-	margin: 60px auto;
-	padding: 0 24px;
-	text-align: center;
+	max-width: 1120px;
+	margin: 24px auto 48px;
+	padding: 32px 28px;
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	background: var(--surface);
+	box-shadow: var(--shadow);
 }
 
-.intro h1 {
-	font-size: 3rem;
-	margin-bottom: 8px;
-	color: #1f2933;
+.intro .kicker {
+	color: var(--gold);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
-.intro h4 {
-	font-size: 1.1rem;
-	font-weight: 500;
-	color: #6b7785;
-	margin-bottom: 20px;
+.intro h2 {
+	max-width: 760px;
+	font-size: clamp(1.7rem, 3vw, 2.7rem);
+	letter-spacing: -0.05em;
+	margin-bottom: 12px;
 }
 
 .intro p {
 	font-size: 1rem;
 	line-height: 1.6;
-	color: #3a4148;
+	color: var(--text-dim);
+	max-width: 720px;
+}
+
+@media (max-width: 700px) {
+	.intro {
+		margin: 16px 16px 36px;
+		padding: 24px 20px;
+	}
 }
 
 .home-hero {
@@ -166,14 +180,14 @@
 	box-sizing: border-box;
 	position: relative;
 	display: block;
-	width: 84px;
-	height: 42px;
+	width: 64px;
+	height: 32px;
 	border-radius: 999px;
 	cursor: pointer;
 	overflow: hidden;
 	transition: background 0.3s ease;
-	margin-left: 800px;
-	gap: 10px;
+	margin-left: 0;
+	flex: 0 0 64px;
 }
 
 .theme-toggle-knob {
@@ -181,8 +195,8 @@
 	position: absolute;
 	top: 3px;
 	left: 3px;
-	width: 36px;
-	height: 36px;
+	width: 26px;
+	height: 26px;
 	border-radius: 50%;
 	transition:
 		transform 0.3s ease,
@@ -222,7 +236,7 @@ body[data-theme='light'] .theme-toggle {
 }
 body[data-theme='light'] .theme-toggle-knob {
 	background: #f4f4f5;
-	transform: translateX(42px);
+	transform: translateX(32px);
 }
 body[data-theme='light'] .theme-icon-moon {
 	left: 8px;
