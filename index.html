@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CartoonHub – Alle Cartoons an einem Ort</title>
+		<title>CartoonHub Alle Cartoons an einem Ort</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 
 		<link rel="stylesheet" href="./src/css/pages/styles.css" />
@@ -48,7 +48,7 @@
 								</div>
 								<div class="menu-column highlight-column">
 									<div class="tipp-card">
-										<span class="badge">🏆 TIPP DER WOCHE</span>
+										<span class="badge"> TIPP DER WOCHE</span>
 										<h5>LOONEY TUNES</h5>
 										<p>Bugs Bunny &amp; Co. entdecken.</p>
 										<a href="#looney-tunes" class="card-btn">Ansehen &rarr;</a>
@@ -210,47 +210,91 @@
 				</nav>
 			</div>
 		</header>
+		<section>
+			<div style="text-align: center; margin-bottom: 2rem">
+				<h1 style="font-size: 3.9rem; margin-bottom: 0.5rem">
+					Willkommen bei CartoonHub!
+				</h1>
+				<h2 style="font-size: 1.9rem">Deine Welt voller Cartoons</h2>
+			</div>
 
-		<section class="hero">
-			<div class="hero-text">
-				<h1>Willkommen bei CartoonHub!</h1>
-				<h2>Deine Welt voller Cartoons</h2>
+			<div
+				style="
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 2rem;
+					flex-wrap: wrap;
+				">
+				<div style="flex: 1 1 500px">
+					<p
+						style="
+							text-align: start;
+							display: flex;
+							flex-direction: column;
+							gap: 1rem;
+							padding: 1rem;
+							margin: 0 auto;
+							font-size: 1.5rem;
+							margin-bottom: 2rem;
+							margin-top: 2rem;
+						">
+						Lachen, Abenteuer und Figuren zum Liebhaben für Gross und Klein von
+						früher und heute. Egal ob du in Erinnerungen an deine Kindheit
+						schwelgen oder ganz neue Serien entdecken möchtest: uns findest du
+						eine bunte Vielfalt an Geschichten, die begeistern, berühren und
+						einfach gute Laune machen. Von legendären Figuren, die schon
+						Generationen vor dir begleitet haben, bis zu frischen Serien, die
+						gerade erst ihren Weg in die Herzen der Zuschauer finden wir bringen
+						die ganze Welt der Cartoons an einem Ort zusammen. Übersichtlich
+						sortiert, liebevoll kuratiert und immer einen Klick entfernt: Starte
+						jetzt deine ganz persönliche Entdeckungsreise durch Geschichten, die
+						zum Lachen bringen, zum Träumen einladen und einfach im Herzen
+						bleiben.
+					</p>
 
-				<p>
-					Von zeitlosen Klassikern bis zu neuen Lieblingsserien: Finde
-					Geschichten und Figuren für jede Generation, übersichtlich
-					zusammengestellt.
-				</p>
+					<div class="hero-actions">
+						<a class="btn btn-primary" href="src/pages/serien.html"
+							>Jetzt entdecken</a
+						>
+						<a class="btn btn-outline" href="#highlights">Highlights ansehen</a>
+					</div>
+				</div>
 
-				<div class="hero-actions">
-					<a class="btn btn-primary" href="src/pages/serien.html"
-						>Jetzt entdecken</a
-					>
-					<a class="btn btn-outline" href="#highlights">Highlights ansehen</a>
+				<div
+					class="hero-visual"
+					style="
+						flex: 1 1 400px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+					">
+					<img
+						src="./src/assets/img/pikachu.jpg"
+						alt="Pikachu aus Pokémon"
+						class="hero-img"
+						style="max-width: 100%; height: auto; border-radius: 12px" />
+					<div class="big-title">Pika Pika!<br />Pokémon im Fokus</div>
 				</div>
 			</div>
-
-			<div class="hero-visual">
-				<img
-					src="./src/assets/img/pikachu.jpg"
-					alt="Pikachu aus Pokémon"
-					class="hero-img" />
-				<div class="big-title">Pika Pika!<br />Pokémon im Fokus</div>
+		</section>
+		<section class="landing-section gallery-section" style="margin-top: 4rem">
+			<div class="section-intro">
+				<p class="kicker" style="font-size: 2.4rem">Galerie</p>
+				<h2>Ein paar Lieblingsmomente.</h2>
+			</div>
+			<div class="gallery-grid">
+				<img src="./src/assets/img/thom3.jpg" alt="Cartoon-Galerie Motiv 1" />
+				<img src="./src/assets/img/thom4.jpg" alt="Cartoon-Galerie Motiv 2" />
+				<img src="./src/assets/img/thom7.jpg" alt="Cartoon-Galerie Motiv 3" />
+				<img src="./src/assets/img/thom8.jpg" alt="Cartoon-Galerie Motiv 4" />
+				<img src="./src/assets/img/thom9.jpg" alt="Cartoon-Galerie Motiv 4" />
 			</div>
 		</section>
 
-		<section class="intro">
-			<h1>Was dich erwartet</h1>
-			<h4>Eine liebevolle Übersicht für grosse nd kleine Cartoon-Fans</h4>
-			<p>
-				Durchstöbere Klassiker, Abenteuer und moderne Animation an einem Ort.
-				Wähle dein Genre, lass dich von neuen Favoriten überraschen und klicke
-				einfach auf eine Karte für alle Details.
-			</p>
-		</section>
 		<section class="landing-section highlights-section" id="highlights">
 			<div class="section-intro">
-				<p class="kicker">Top-Auswahl</p>
+				<p class="kicker" style="font-size: 2.4rem">Top-Auswahl</p>
 				<h2>Vier Serien, die heute im Mittelpunkt stehen.</h2>
 			</div>
 			<div class="highlight-grid">
@@ -318,69 +362,21 @@
 				</a>
 			</div>
 		</section>
-		<section class="benefits-section">
-			<div class="section-intro">
-				<h2>Mehr entdecken. Einfacher finden.</h2>
-			</div>
-			<div class="benefit-grid">
-				<div class="benefit-item">
-					<span class="benefit-icon">✦</span>
-					<div>
-						<h3>Riesige Auswahl</h3>
-						<p>
-							Von zeitlosen Klassikern bis zu aktuellen Anime-Hits — für jeden
-							Geschmack ist etwas dabei.
-						</p>
-					</div>
-				</div>
-				<div class="benefit-item">
-					<span class="benefit-icon">◉</span>
-					<div>
-						<h3>Überall verfügbar</h3>
-						<p>
-							Egal ob Handy, Tablet oder Desktop — deine Übersicht ist immer
-							griffbereit.
-						</p>
-					</div>
-				</div>
-				<div class="benefit-item">
-					<span class="benefit-icon">♡</span>
-					<div>
-						<h3>Für die ganze Familie</h3>
-						<p>
-							Klare Kategorien sorgen dafür, dass jeder im Nu findet, was ihm
-							gefällt.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="landing-section gallery-section">
-			<div class="section-intro">
-				<p class="kicker">Galerie</p>
-				<h2>Ein paar Lieblingsmomente.</h2>
-			</div>
-			<div class="gallery-grid">
-				<img src="./src/assets/img/thom3.jpg" alt="Cartoon-Galerie Motiv 1" />
-				<img src="./src/assets/img/thom4.jpg" alt="Cartoon-Galerie Motiv 2" />
-				<img src="./src/assets/img/thom7.jpg" alt="Cartoon-Galerie Motiv 3" />
-				<img src="./src/assets/img/thom8.jpg" alt="Cartoon-Galerie Motiv 4" />
-			</div>
-		</section>
 
 		<section class="home-cta">
 			<div>
 				<h1>Bereit für die nächste Folge?</h1>
 				<h3>Finde deine neue Lieblingsserie.</h3>
 			</div>
-			<a class="btn btn-info" href="src/pages/preise.html">Preise ansehen</a>
+			<a class="preis" href="src/pages/preise.html">Preise ansehen</a>
 		</section>
 
 		<section class="landing-section landing-table">
 			<div class="section-intro">
-				<p class="kicker">Preise</p>
-				<h2>Transparente Pakete für Cartoon-Design und Inhalte</h2>
+				<p class="kicker" style="font-size: 3rem; text-align: center">Preise</p>
+				<h2 style="text-align: center">
+					Transparente Pakete für Cartoon-Design und Inhalte
+				</h2>
 			</div>
 			<table class="pricing-table">
 				<thead>
@@ -413,6 +409,44 @@
 					</tr>
 				</tbody>
 			</table>
+		</section>
+
+		<section class="benefits-section">
+			<div class="section-intro">
+				<h2>Mehr entdecken. Einfacher finden.</h2>
+			</div>
+			<div class="benefit-grid">
+				<div class="benefit-item">
+					<span class="benefit-icon">✦</span>
+					<div>
+						<h3>Riesige Auswahl</h3>
+						<p>
+							Von zeitlosen Klassikern bis zu aktuellen Anime Hits für jeden
+							Geschmack ist etwas dabei.
+						</p>
+					</div>
+				</div>
+				<div class="benefit-item">
+					<span class="benefit-icon">◉</span>
+					<div>
+						<h3>Überall verfügbar</h3>
+						<p>
+							Egal ob Handy, Tablet oder Desktop deine Übersicht ist immer
+							griffbereit.
+						</p>
+					</div>
+				</div>
+				<div class="benefit-item">
+					<span class="benefit-icon">♡</span>
+					<div>
+						<h3>Für die ganze Familie</h3>
+						<p>
+							Klare Kategorien sorgen dafür, dass jeder im Nu findet, was ihm
+							gefällt.
+						</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<script>
