@@ -3,8 +3,8 @@ import { CARTOONS, CATEGORIES } from '../data/data.js';
 function cardHTML(item) {
 	const isSubpage = window.location.pathname.includes('/src/pages/');
 	const imagePath = item.img.replace(
-		'./src/assets/img/',
-		isSubpage ? '../assets/img/' : './src/assets/img/',
+		'./src/assets/',
+		isSubpage ? '../assets/' : './src/assets/',
 	);
 	const detailPath = isSubpage
 		? `detail.html?id=${item.id}`
@@ -36,6 +36,11 @@ function cardHTML(item) {
   `;
 }
 
+function getCategoryItems(categoryId) {
+	if (categoryId === 'klassiker') return CARTOONS;
+	return CARTOONS.filter((cartoon) => cartoon.cat === categoryId);
+}
+
 function renderAll() {
 	const main = document.getElementById('results');
 	if (!main) return;
@@ -45,7 +50,7 @@ function renderAll() {
 	}
 	main.innerHTML = '';
 	CATEGORIES.forEach((cat) => {
-		const items = CARTOONS.filter((c) => c.cat === cat.id);
+		const items = getCategoryItems(cat.id);
 		if (items.length === 0) return;
 		const section = document.createElement('section');
 		section.className = 'category-section row-section';
@@ -69,7 +74,7 @@ function renderCatalogByCategory() {
 	const main = document.getElementById('results');
 	if (!main) return;
 	main.innerHTML = CATEGORIES.map((category) => {
-		const items = CARTOONS.filter((cartoon) => cartoon.cat === category.id);
+		const items = getCategoryItems(category.id);
 		if (!items.length) return '';
 		return `
 			<section class="category-section row-section catalog-section" id="${category.id}">
