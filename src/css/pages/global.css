@@ -60,6 +60,8 @@ html {
 }
 
 body {
+	min-width: 0;
+	overflow-x: hidden;
 	background:
 		radial-gradient(
 			circle at top left,
@@ -259,6 +261,13 @@ a {
 	resize: vertical;
 }
 
+.page-form input,
+.page-form textarea,
+button,
+select {
+	font: inherit;
+}
+
 .contact-meta p {
 	margin: 10px 0;
 	color: var(--text-dim);
@@ -278,7 +287,32 @@ a {
 }
 
 @media (max-width: 560px) {
+	.page-main {
+		padding: 44px 16px 32px;
+	}
+
+	.small-hero {
+		padding: 0 8px 8px;
+	}
+
+	.page-hero .kicker {
+		font-size: clamp(2rem, 10vw, 3.4rem) !important;
+	}
+
+	.page-hero h1 {
+		font-size: clamp(1.85rem, 8vw, 2.6rem);
+		line-height: 1.12;
+	}
+
+	.page-hero p:last-child {
+		font-size: 1rem !important;
+	}
+
 	.catalog-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.info-card {
+		padding: 20px 18px;
 	}
 }

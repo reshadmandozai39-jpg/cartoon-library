@@ -215,14 +215,14 @@
 	box-sizing: border-box;
 	position: relative;
 	display: block;
-	width: 64px;
-	height: 32px;
+	width: 56px;
+	height: 28px;
 	border-radius: 999px;
 	cursor: pointer;
 	overflow: hidden;
 	transition: background 0.3s ease;
 	margin-left: 0;
-	flex: 0 0 64px;
+	flex: 0 0 56px;
 }
 
 .theme-toggle-knob {
@@ -230,8 +230,8 @@
 	position: absolute;
 	top: 3px;
 	left: 3px;
-	width: 26px;
-	height: 26px;
+	width: 22px;
+	height: 22px;
 	border-radius: 50%;
 	transition:
 		transform 0.3s ease,
@@ -271,7 +271,7 @@ body[data-theme='light'] .theme-toggle {
 }
 body[data-theme='light'] .theme-toggle-knob {
 	background: #f4f4f5;
-	transform: translateX(32px);
+	transform: translateX(28px);
 }
 body[data-theme='light'] .theme-icon-moon {
 	left: 8px;
