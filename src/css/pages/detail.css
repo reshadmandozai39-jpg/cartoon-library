@@ -204,6 +204,10 @@
 }
 
 @media (max-width: 600px) {
+	.detail-main {
+		padding: 28px 16px 48px;
+	}
+
 	.detail-card {
 		padding: 20px;
 	}
@@ -218,5 +222,9 @@
 
 	.detail-actions .btn {
 		flex: 1;
+	}
+
+	#detailImage {
+		height: min(72vw, 300px);
 	}
 }
