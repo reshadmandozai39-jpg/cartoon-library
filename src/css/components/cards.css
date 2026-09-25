@@ -425,28 +425,6 @@ body[data-theme='light'] .card-meta {
 }
 
 @media (max-width: 900px) {
-	.burger {
-		display: flex;
-	}
-
-	.main-nav {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: var(--header-bg);
-		backdrop-filter: blur(16px);
-		flex-direction: column;
-		padding: 20px;
-		border-bottom: 1px solid var(--border);
-		box-shadow: var(--shadow);
-	}
-
-	.main-nav.active {
-		display: flex;
-	}
-
 	.nav-item {
 		width: 100%;
 	}
