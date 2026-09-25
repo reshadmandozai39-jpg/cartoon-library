@@ -337,6 +337,7 @@ body[data-theme='light'] .card-meta {
 	color: var(--text);
 	margin-bottom: 8px;
 	line-height: 1.25;
+	min-height: 2.5em;
 	display: -webkit-box;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
@@ -350,6 +351,7 @@ body[data-theme='light'] .card-meta {
 	color: var(--text-dim);
 	margin-bottom: 12px;
 	line-height: 1.55;
+	min-height: 3.1em;
 	display: -webkit-box;
 	line-clamp: 2;
 	-webkit-line-clamp: 2;
