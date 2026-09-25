@@ -470,4 +470,79 @@ body[data-theme='light'] .card-meta {
 	.three-col {
 		grid-template-columns: 1fr;
 	}
+
+	.home-page .highlight-grid,
+	.home-page .benefit-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.home-page .benefit-item {
+		min-width: 0;
+		gap: 12px;
+		padding: 16px;
+	}
+
+	.home-page .benefit-item > div {
+		min-width: 0;
+	}
+}
+
+@media (max-width: 560px) {
+	.home-page .highlight-grid,
+	.home-page .benefit-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.home-page .benefits-section {
+		padding: 36px 16px 28px;
+	}
+
+	.home-page .benefit-item {
+		min-height: 0;
+		padding: 14px;
+	}
+
+	.home-page .home-cta {
+		margin: 20px 16px 30px;
+		padding: 18px;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 14px;
+	}
+
+	.home-page .home-cta h1 {
+		font-size: clamp(1.5rem, 7vw, 2rem);
+		line-height: 1.12;
+	}
+
+	.home-page .home-cta h3 {
+		font-size: 1rem;
+		line-height: 1.45;
+	}
+
+	.home-page .home-cta .preis {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 48px;
+		padding: 12px 20px;
+		font-size: 1rem;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	.home-page .landing-table {
+		padding-top: 24px;
+	}
+
+	.home-page .landing-table .kicker {
+		font-size: clamp(1.8rem, 9vw, 2.5rem) !important;
+	}
+
+	.home-page .pricing-table {
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
 }

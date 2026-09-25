@@ -163,7 +163,71 @@ function scrollRow(button, direction) {
 
 window.scrollRow = scrollRow;
 
+function normalizeMenuTarget(value) {
+	return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function getFallbackCategory(link) {
+	const navItem = link.closest('.nav-item');
+	const triggerText =
+		navItem?.querySelector(':scope > .nav-link')?.textContent || '';
+	const normalizedTrigger = normalizeMenuTarget(triggerText);
+	const triggerCategory = CATEGORIES.find((category) => {
+		const categoryId = normalizeMenuTarget(category.id);
+		const categoryLabel = normalizeMenuTarget(category.label);
+		return (
+			normalizedTrigger.includes(categoryId) ||
+			normalizedTrigger.includes(categoryLabel)
+		);
+	});
+	if (triggerCategory) return triggerCategory;
+
+	const columnHeading = normalizeMenuTarget(
+		link.closest('.menu-column')?.querySelector('h4')?.textContent || '',
+	);
+	if (columnHeading.includes('genres')) {
+		return CATEGORIES.find((category) => category.id === 'klassiker');
+	}
+	return CATEGORIES.find((category) => category.id === 'retro') || CATEGORIES[0];
+}
+
+function prepareHomeMenuLinks() {
+	if (!document.body.classList.contains('home-page')) return;
+
+	document.querySelectorAll('a[href^="#"]').forEach((link) => {
+		const fragment = decodeURIComponent(link.getAttribute('href').slice(1));
+		if (!fragment || document.getElementById(fragment)) return;
+
+		const normalizedFragment = normalizeMenuTarget(fragment);
+		const category = CATEGORIES.find(
+			(item) => normalizeMenuTarget(item.id) === normalizedFragment,
+		);
+		if (category) {
+			link.href = `src/pages/serien.html#${category.id}`;
+			return;
+		}
+
+		const cartoon =
+			CARTOONS.find(
+				(item) => normalizeMenuTarget(item.id) === normalizedFragment,
+			) ||
+			CARTOONS.find((item) =>
+				normalizeMenuTarget(item.id).startsWith(normalizedFragment),
+			);
+		if (cartoon) {
+			link.href = `src/pages/detail.html?id=${cartoon.id}`;
+			return;
+		}
+
+		const fallbackCategory = getFallbackCategory(link);
+		if (fallbackCategory) {
+			link.href = `src/pages/serien.html#${fallbackCategory.id}`;
+		}
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+	prepareHomeMenuLinks();
 	const burgerBtn = document.getElementById('burgerBtn');
 	const mainNav =
 		document.getElementById('mainNav') || document.querySelector('.main-nav');
@@ -283,4 +347,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	renderAll();
+	if (window.location.hash) {
+		const targetId = decodeURIComponent(window.location.hash.slice(1));
+		document
+			.getElementById(targetId)
+			?.scrollIntoView({ block: 'start', behavior: 'instant' });
+	}
 });
